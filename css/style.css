@@ -1,5 +1,12 @@
 /*Google Fonts*/
 
+
+/*div recognition cheat sheet*/
+nav, #profile, #quick_links
+    {
+        border: 1px dashed red;
+    }
+
 /*Style guide cheat sheet
 
 dark blue:  #281D54
@@ -9,7 +16,7 @@ gold:       #FAC739
 grey:       #C7C7C7
 
 /* Reset Style Rules */
-HTML
+HTML, *
     {
         padding:0;
         margin:0;
@@ -35,17 +42,49 @@ p
     {
         color:#C7C7C7;
     }
-/* Header Style Rules*/
-header li
+/* Class Rules */
+.button_link
     {
-        list-style-type: none;
-        margin-bottom: 2em;
-    }
-header a
-    {
+        display:block;
         border: 3px solid #fac739;
         background-color:#294294;
-        text-decoration:none;
         padding: 10px 24px;
+        width:max-content;
+    }
+
+/* List Rules*/
+header li, #quick_links li
+    {
+        list-style-type: none;
+        margin: 0 0 2em; /*Margin needed for button spacing in mobile view*/
+    }
+header a, #quick_links a
+    {
+        text-decoration:none;
+    }
+/*Grid Container Rules*/
+main
+{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin:0 5% 0 5%;
+}
+/* Nav Rules */
+nav
+    {
+        display:flex;
+        flex-direction: column;/*flex-direction should change with screen size*/
+        justify-content: center;
+        width:max-content;
+        margin:auto;
+        
+    }
+nav ul
+    {
+        /*display:none;*/
+        border: 1px dashed blue;
+        width:max-content;
+        display:flex;
+        flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
         
     }
