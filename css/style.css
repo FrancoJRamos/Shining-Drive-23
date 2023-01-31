@@ -1,0 +1,51 @@
+/*Google Fonts*/
+
+/*Style guide cheat sheet
+
+dark blue:  #281D54
+blue:       #294294
+dark gold:  #D9A925
+gold:       #FAC739
+grey:       #C7C7C7
+
+/* Reset Style Rules */
+HTML
+    {
+        padding:0;
+        margin:0;
+        border:0;
+    }
+
+/* HTML Container Style Rules*/
+html
+    {
+        min-height: 100%;
+        background:linear-gradient(#281D54 ,#294294 20%,80%, #281D54);
+    }
+/* Text Rules */
+h2
+    {
+        color: #fac739;
+    }
+a
+    {
+        color: #fac739;
+    }
+p
+    {
+        color:#C7C7C7;
+    }
+/* Header Style Rules*/
+header li
+    {
+        list-style-type: none;
+        margin-bottom: 2em;
+    }
+header a
+    {
+        border: 3px solid #fac739;
+        background-color:#294294;
+        text-decoration:none;
+        padding: 10px 24px;
+        
+    }
