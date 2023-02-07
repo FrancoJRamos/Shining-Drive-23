@@ -7,6 +7,11 @@ nav, #profile, #quick_links
         border: 1px dashed red;
     }
 
+/*Debuging div sizes cheat sheet*/
+.test_div
+    {
+        background-color: bisque;
+    }
 /*Style guide cheat sheet
 
 dark blue:  #281D54
@@ -22,9 +27,10 @@ HTML, *
         margin:0;
         border:0;
     }
+/*General Rules for all Devices, sorted by HTML Semantic Structure */
 
-/* HTML Container Style Rules*/
-html
+/* Body Container Style Rules*/
+body
     {
         min-height: 100%;
         background:linear-gradient(#281D54 ,#294294 20%,80%, #281D54);
@@ -43,15 +49,21 @@ p
         color:#C7C7C7;
     }
 /* Class Rules */
+.sd_logo
+    {
+        width:75px;
+        height: 75px;
+        margin: 0 0 10px;
+    }
 .button_link
     {
         display:block;
         border: 3px solid #fac739;
         background-color:#294294;
         padding: 10px 24px;
-        width:max-content;
+        width:3.5em;
+        text-align:center;
     }
-
 /* List Rules*/
 header li, #quick_links li
     {
@@ -62,22 +74,12 @@ header a, #quick_links a
     {
         text-decoration:none;
     }
-/*Grid Container Rules*/
-main
-{
-    display:grid;
-    grid-template-columns: 1fr;
-    margin:0 5% 0 5%;
-}
+
 /* Nav Rules */
 nav
     {
         display:flex;
-        flex-direction: column;/*flex-direction should change with screen size*/
-        justify-content: center;
-        width:max-content;
-        margin:auto;
-        
+        width:100%;
     }
 nav ul
     {
@@ -85,6 +87,79 @@ nav ul
         border: 1px dashed blue;
         width:max-content;
         display:flex;
-        flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
-        
     }
+
+/*Main Rules*/
+
+
+/* Layout Rules based on Screen Sizes */
+/* Follows Similar Semantic Structure as General Rules */
+
+/* Mobile View: 0px to 750px */
+
+/* Main Rules/Grid Rules */
+main
+{
+    display:grid;
+    grid-template-columns: 1fr;
+    margin:0 5% 0 5%;
+}
+
+/* Header Rules */
+/* Nav Layout */
+nav
+    {
+        flex-direction: column;/*flex-direction should change with screen size*/
+        align-items: center;/*note to self: align-items rule for adjusting on the horizontal axis, justify-content for vertical*/
+        margin:auto;
+    }
+nav ul
+    {
+        flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
+    }
+/* Body Rules */
+#quick_links
+    {
+        background-color:bisque;
+        display:flex;
+        flex-direction: column;
+    }
+
+#quick_links ul
+    {
+        background-color:cadetblue;
+        display:flex;
+        flex-direction:row;
+        align-items:center;
+    }
+.quick_links_list li
+    {
+        margin: 0 0 10px;
+    }
+.quick_links_item
+    {
+        margin: 0 10px;
+    }
+.quick_links_list img
+    {
+        width:150px;
+        height:auto;
+        border: 3px solid #FAC739;
+    }
+/* Footer Rules */
+
+/* Tablet View: 751px to 1279px */
+
+/* Header Rules */
+
+/* Body Rules */
+
+/* Footer Rules */
+
+/* Desktop View: 1280px to 1920px */
+
+/* Header Rules */
+
+/* Body Rules */
+
+/* Footer Rules */
