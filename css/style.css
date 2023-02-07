@@ -36,7 +36,7 @@ body
         background:linear-gradient(#281D54 ,#294294 20%,80%, #281D54);
     }
 /* Text Rules */
-h2
+h1, h2
     {
         color: #fac739;
     }
@@ -65,17 +65,16 @@ p
         text-align:center;
     }
 /* List Rules*/
-header li, #quick_links li
+header li, #quick_links li, footer li
     {
         list-style-type: none;
-        margin: 0 0 2em; /*Margin needed for button spacing in mobile view*/
     }
-header a, #quick_links a
+header a, #quick_links a, footer a
     {
         text-decoration:none;
     }
 
-/* Nav Rules */
+/* Header Rules */
 nav
     {
         display:flex;
@@ -89,20 +88,30 @@ nav ul
         display:flex;
     }
 
-/*Main Rules*/
+/* Body Rules */
 
-
+/* Footer Rules */
+footer
+    {
+        background-color: #281D54;
+    }
 /* Layout Rules based on Screen Sizes */
 /* Follows Similar Semantic Structure as General Rules */
 
 /* Mobile View: 0px to 750px */
 
 /* Main Rules/Grid Rules */
-main
+main    
+    {
+        width: 100%;
+    }
+section
 {
     display:grid;
     grid-template-columns: 1fr;
-    margin:0 5% 0 5%;
+    grid-template-rows: 1fr 2fr 3fr;
+    margin:auto;
+    width:90%;
 }
 
 /* Header Rules */
@@ -117,20 +126,51 @@ nav ul
     {
         flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
     }
+nav li
+    {
+        margin: 0 0 2.5em;
+    }
 /* Body Rules */
+.page_title
+    {
+        grid-column:1;
+        grid-row:1/span1;
+        width:100%;
+    }
+#profile
+    {
+        grid-column:1;
+        grid-row:2/span1;
+        width: 100%;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+    }
+#profile h1, #profile p
+    {
+        text-align: center;
+    }
 #quick_links
     {
-        background-color:bisque;
         display:flex;
         flex-direction: column;
+        grid-row: 3 /span 1;
+        grid-column: 1/ span 1;
+        width:100%;
+        overflow-x:hidden;
+        
     }
-
+#quick_links h2
+    {
+        text-align:center;
+    }
 #quick_links ul
     {
-        background-color:cadetblue;
         display:flex;
         flex-direction:row;
         align-items:center;
+        overflow-x:scroll;
+        margin:0 0 5px;
     }
 .quick_links_list li
     {
@@ -140,14 +180,34 @@ nav ul
     {
         margin: 0 10px;
     }
-.quick_links_list img
+#quick_links ul img
     {
-        width:150px;
+        width: 80px;
         height:auto;
         border: 3px solid #FAC739;
     }
-/* Footer Rules */
 
+/* Footer Rules */
+footer
+    {
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        height:3em;
+        justify-content: center;
+    }
+footer p
+    {
+        margin: 0 0 5px;
+    }
+footer ul
+    {
+        display:flex;
+    }
+footer li   
+    {
+        margin: 0 0 0 1em;
+    }
 /* Tablet View: 751px to 1279px */
 
 /* Header Rules */
