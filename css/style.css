@@ -49,12 +49,7 @@ p
         color:#C7C7C7;
     }
 /* Class Rules */
-.sd_logo
-    {
-        width:75px;
-        height: 75px;
-        margin: 0 0 10px;
-    }
+
 .button_link
     {
         display:block;
@@ -62,6 +57,15 @@ p
         background-color:#294294;
         padding: 10px 24px;
         width:3.5em;
+        text-align:center;
+    }
+.button_link_sub
+    {
+        display:block;
+        border: 3px solid #fac739;
+        background-color:#294294;
+        padding:5px 0 5px 0;
+        width: 80px;
         text-align:center;
     }
 /* List Rules*/
@@ -79,6 +83,14 @@ nav
     {
         display:flex;
         width:100%;
+    }
+nav button
+    {
+        margin:15px;
+        width:75px;
+        height:75px;
+        border: 2px solid #FAC739;
+        background-color: #294294;
     }
 nav ul
     {
@@ -109,9 +121,11 @@ section
 {
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 7fr 7fr;
     margin:auto;
     width:90%;
+    height:min-content;
+    margin-bottom: 10px;
 }
 
 /* Header Rules */
@@ -150,6 +164,11 @@ nav li
     {
         text-align: center;
     }
+#profile img
+    {
+        width:200px;
+        height:auto;
+    }
 #quick_links
     {
         display:flex;
@@ -163,6 +182,7 @@ nav li
 #quick_links h2
     {
         text-align:center;
+        margin:5px 0 5px;
     }
 #quick_links ul
     {
@@ -195,6 +215,7 @@ footer
         align-items:center;
         height:3em;
         justify-content: center;
+        padding-bottom: 10px;
     }
 footer p
     {
