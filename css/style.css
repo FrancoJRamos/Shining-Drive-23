@@ -145,7 +145,7 @@ nav li
         margin: 0 0 2.5em;
     }
 /* Body Rules */
-.page_title
+.page_banner
     {
         grid-column:1;
         grid-row:1/span1;

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shining Drive Contact Page</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav >
+                <button type="button"><img src="images/sd-logo.svg" 
+                    alt="Navigation Menu">
+                </button>
+                <ul class="drop_down_nav ">
+                    <li><a href="index.html" class="button_link">Home</a></li>
+                    <li><a href="#" class="button_link">Contact</a></li>
+                    <li><a href="#" class="button_link">Bio</a></li>
+                    <li><a href="#" class="button_link">Motion</a></li>
+                    <li><a href="#" class="button_link">Design</a></li>
+                    <li><a href="#" class="button_link">Games</a></li>
+                </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="contact_buttons">
+            <div class="page_banner"><img src="" alt="Contact & Inquiries"></div>
+            <h1>Additonal Information available here</h1>
+            
+            <div id="contact_resume">
+                <button class="accordion">Resume</button>
+                <div class="contact_panel">
+                    <p>Click on the link to download a copy of my Resume</p>
+                    <a href="media/FrancoJRamos_Resume.pdf" download>Resume</a>
+                </div>
+            </div>
+
+            <div id="contact_email">
+                <button class="accordion">Email</button>
+                <div class="contact_panel">
+                    <p>To send an email, please complete the form below:</p>
+                    <form method="post" id="my-form">
+                        <fieldset>
+                            <legend>Please enter your information</legend>
+                            <label for="name">Your Name: </label>
+                            <input type="text" name="Name" id="name" size="20" required> <br>
+                            <label for="email">Your Email: </label>
+                            <input type="email" name="Email" id="email" size="20" required> <br>
+                        </fieldset>
+
+                        <fieldset>
+                            <legend>Please select a Topic</legend>
+                            <input type="radio" name="Topic" id="contact_motion" value="Motion">
+                            <label for="contact_motion">Motion</label><br>
+                            <input type="radio" name="Topic" id="contact_design" value="Design">
+                            <label for="contact_design">Design</label><br>
+                            <input type="radio" name="Topic" id="contact_other" value="Other">
+                            <label for="contact_other">Other</label><br>
+                        </fieldset>
+
+                        <label for="contact_message">Please enter any additional information</label><br>
+                        <textarea id="contact_message" name="contact_message" rows="4" cols="50" 
+                        placeholder="Your Message goes Here..."required></textarea><br><br>
+                        <div class="contact_submit">
+                            <input type="reset" value="Reset" id="Reset">
+                            <input type="submit" value="Submit" id="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div id="contact_more">
+                <button class="accordion">More</button>
+                <div class="contact_panel">
+                    <p>Additional Work found here</p>
+                    <ul class="imagelinks ">
+                        <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank"><img src = "images/contact_button_1.png" alt="Instagram profile" ></a></li>
+                        <li><a href="https://www.behance.net/francoramos3" target="_blank"><img src = "images/contact_button_2.png" alt="Behance profile" ></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank"><img src = "images/contact_button_3.png" alt="Youtube profile" ></a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
