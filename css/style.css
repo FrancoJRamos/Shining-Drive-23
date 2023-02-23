@@ -207,7 +207,20 @@ nav ul
 
 /* Main Rules */
 
-
+/* Contact Page Rules*/
+#contact_resume p
+    {
+        margin: 0 0 10px;
+    }
+#contact_resume a
+    {
+        text-decoration: underline;
+    }
+/* Bio Page Rules*/
+#bio_description, #bio_story
+    {
+        font-family: 'Alegreya', serif;
+    }
 /* Footer Rules */
 footer
     {
@@ -249,7 +262,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 2fr 3fr 2fr 1fr;
+            grid-template-rows: 2fr 3fr 2fr 2fr 1fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -354,14 +367,6 @@ footer
             grid-row: 2/ span 1;
             margin:0 0 10px;
         }
-    #contact_resume p
-        {
-            margin: 0 0 10px;
-        }
-    #contact_resume a
-        {
-            text-decoration: underline;
-        }
     #contact_email
         {
             width:100%;
@@ -380,13 +385,14 @@ footer
     #bio_grid .page_banner
         {
             grid-column: 1/span 3;
-            grid-row:1/span1;
+            grid-row:1/span 1;
             width:100%;
         }
     #bio_grid .arrow_left
         {
             grid-column: 1/span 1;
             grid-row:2/span1;
+            justify-self:center;        
         }
     #bio_interactive
         {
@@ -397,17 +403,16 @@ footer
             display:flex;
             flex-direction: row;
             overflow-x: scroll;
-            border: 1px dashed orange;
         }
     #bio_interactive img
         {
-            height:100%;
             object-fit: contain;
         }
     #bio_grid .arrow_right
         {
             grid-column: 3/span 1;
             grid-row:2/span1;
+            justify-self:center;
         }
     #bio_description
         {
@@ -416,10 +421,15 @@ footer
             width:100%;
             font-family: 'Alegreya', serif;
         }
+    #bio_story
+        {
+            grid-column:1/span 3;
+            grid-row:4/span 1;
+        }
     #bio_story_select
         {
             grid-column: 1/span 3;
-            grid-row:4/span1;
+            grid-row:5/span1;
             width:100%;
             overflow-x:scroll;
         }
@@ -472,7 +482,7 @@ footer
             grid-column: 1/span 3;
             grid-row:4/span1;
         }
-    #motion_grid .resource_list
+    #motion_grid .resource_list,#design_grid .resource_list
         {
             grid-column:1/span 3;
             grid-row:5/span 1;
@@ -523,7 +533,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr ;
-            grid-template-rows: 1fr 3fr 3fr;
+            grid-template-rows: 10em 3fr 3fr;
             margin:auto;
             width:80%;
             height:min-content;
@@ -533,7 +543,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 2fr 2fr 5fr 3fr;
+            grid-template-rows: 10em 2fr 5fr 3fr;
             margin:auto;
             width:60%;
             height:min-content;
@@ -543,7 +553,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 3fr 1fr;
-            grid-template-rows: 2fr 5fr 1fr;
+            grid-template-rows: 10em 3fr 2fr 1fr;
             margin:auto;
             width:80%;
             height:min-content;
@@ -553,7 +563,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 4fr 1fr 3fr;
-            grid-template-rows: 2fr 3fr 3em 1fr 2fr;
+            grid-template-rows: 10em 3fr 3em 1fr 2fr;
             margin:auto;
             width:80%;
             height:min-content;
@@ -602,12 +612,13 @@ footer
             display:flex;
             justify-content:space-around;
         }
-    #quick_links ul
+        #quick_links ul
         {
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            margin:0 0 15px;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            place-items:center;
+            margin:0 15px;
         }
     .quick_links_list li
         {
@@ -632,14 +643,6 @@ footer
             grid-row: 2/ span 1;
             margin:0 0 10px;
         }
-    #contact_resume p
-        {
-            margin: 0 0 10px;
-        }
-    #contact_resume a
-        {
-            text-decoration: underline;
-        }
     #contact_email
         {
             width:100%;
@@ -654,6 +657,15 @@ footer
             grid-row: 4/ span 1;
             margin:0 0 10px;
         }
+    #contact_more ul
+        {
+            display:flex;
+            justify-content: space-around;
+        }
+    #contact_more li
+        {
+            margin-right: 1em;
+        }
     /* Bio Page Tablet Rules*/
     #bio_grid .page_banner
         {
@@ -664,11 +676,14 @@ footer
         {
             grid-column: 1/span 1;
             grid-row: 2/span 1;
+            justify-self:center;
+            align-self:center;
         }
     #bio_grid .arrow_right
         {
             grid-column: 4/span 1;
             grid-row: 2/span 1;
+            place-self:center;
         }
     #bio_interactive
         {
@@ -687,10 +702,15 @@ footer
             grid-column:3/span 1;
             grid-row:2/span 1;
         }
+    #bio_story
+        {
+            grid-column: 2/span 2;
+            grid-row:3/span 1;
+        }
     #bio_story_select
         {
             grid-column:2/span 2;
-            grid-row: 3/span 1;
+            grid-row: 4/span 1;
             overflow-x: scroll;
         }
     #bio_story_select ul
@@ -795,7 +815,7 @@ footer
         {
             display:grid;
             grid-template-columns: 2fr 3fr 3fr 2fr;
-            grid-template-rows: 1fr 3fr 3fr;
+            grid-template-rows: 8em 3fr 3fr;
             margin:auto;
             width:80%;
             height:min-content;
@@ -804,29 +824,28 @@ footer
     #contact_grid
         {
             display:grid;
-            grid-template-columns: 1fr;
-            grid-template-rows: 2fr 2fr 5fr 3fr;
+            grid-template-columns: 1fr 4fr 2fr 2fr 4fr 1fr;
+            grid-template-rows: 8em 6fr;
             margin:auto;
-            width:90%;
+            width:80%;
             height:min-content;
-            margin-bottom: 10px;
+            margin-bottom: 1 em;
         }
     #bio_grid
         {
             display:grid;
-            grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 2fr 3fr 2fr 1fr;
+            grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
+            grid-template-rows: 8em 3fr 2fr 1fr;
             margin:auto;
-            width:90%;
+            width:80%;
             height:min-content;
-            margin-bottom: 30px;
-            justify-content: center;
+            margin-bottom: 1 em;
         }
     #motion_grid, #design_grid
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 2fr 3fr 1fr 3fr 1fr 3fr;
+            grid-template-rows: 8em 3fr 1fr 3fr 1fr 3fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -857,14 +876,15 @@ footer
         #quick_links div
         {
             display:flex;
-            justify-content:space-around;
+            justify-content:center;
         }
     #quick_links ul
         {
-            display:flex;
-            flex-direction:column;
-            align-items:center;
-            margin:0 0 15px;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+            place-items:center;
+            margin:0 2em;
         }
     .quick_links_list li
         {
@@ -881,26 +901,118 @@ footer
             height:auto;
             border: 3px solid #FAC739;
         }
+    /* Contact Page Desktop Rules*/
+    #contact_grid .page_banner
+        {
+            grid-column:1/span 3;
+            grid-row:1/span 1;
+        }
+    #contact_resume
+        {
+            grid-column: 2/span 1;
+            grid-row:2/span 1;
+            margin: 0 1em 0 1em;
+            text-align: center;
+        }
+    #contact_email
+        {
+            grid-column: 3/span 2;
+            grid-row:2/span 1;
+            margin: 0 1em 0 1em;
+            text-align: center;
+        }
+    #contact_more
+        {
+            grid-column: 5/span 1;
+            grid-row:2/span 1;
+            text-align: center;
+            
+        }
+    #contact_more ul
+        {
+            display:flex;
+            flex-direction: column;
+        }
+    #contact_more li
+        {
+            margin-right: 1em;
+        }
+    /* Bio page Desktop rules*/
+    #bio_grid .page_banner
+        {
+            grid-column:1/span 3;
+            grid-row:1/span 1;
+        }
+    #bio_grid .arrow_left
+        {
+            grid-column: 2/span 1;
+            grid-row:2/span 1;
+            align-self:center;
+            justify-self:end;
+        }
+    #bio_grid .arrow_right
+        {
+            grid-column:5/span 1;
+            grid-row:2/span 1;
+            align-self:center;
+            justify-self: start;
+        }
+    #bio_interactive
+        {
+            grid-column:3/span 1;
+            grid-row:2/span 1;
+            display:flex;
+            overflow-x: scroll;
+            height:20em;
+        }
+    #bio_interactive img
+        {
+            object-fit: contain;
+        }
+    #bio_description
+        {
+            grid-column:4/span 1;
+            grid-row:2/span 1;
+            text-align: center;
+        }
+    #bio_story
+    {
+        grid-column: 3/span 2;
+        grid-row:3/span 1;
+        text-align: center;
+    }
+    #bio_story_select
+        {
+            grid-column: 3/span 2;
+            grid-row:4/span 1;
+            text-align: center;
+        }
+    #bio_story_select ul
+        {
+            display:flex;
+            justify-content: space-around;
+
+        }
     /* Footer Rules */
     footer
-    {
-        display:flex;
-        flex-direction:column;
-        align-items:flex-end;
-        height:5em;
-        justify-content: center;
-        padding-right: 1em;
-    }
+        {
+            display:flex;
+            flex-direction:column;
+            align-items:flex-end;
+            height:5em;
+            justify-content: center;
+            padding-right: 1em;
+        }
     footer p
-    {
-        margin: 0 0 5px;
-    }
+        {
+            margin: 0 0 5px;
+        }
     footer ul
-    {
-        display:flex;
-    }
+        {
+            display:flex;
+        }
     footer li   
-    {
-        margin: 0 0 0 1em;
-    }
+        {
+            margin: 0 0 0 1em;
+        }
 }
