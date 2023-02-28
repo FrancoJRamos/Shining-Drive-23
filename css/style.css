@@ -1,11 +1,12 @@
 /*Google Fonts*/
 @import url('https://fonts.googleapis.com/css2?family=Alegreya&family=Noto+Sans+Display:wght@500;600&family=Noto+Sans:wght@500;600&family=Roboto&display=swap');
 /*div recognition cheat sheet*/
+/*
 nav,.page_banner, #profile, #quick_links, #contact_resume, #contact_email, #contact_more, #bio_display, #bio_story_select, #motion_project_select
     {
         border: 1px dashed red;
     }
-
+*/
 /*Debuging div sizes cheat sheet*/
 .test_div
     {
@@ -217,8 +218,6 @@ nav button
     }
 nav ul
     {
-        /*display:none;*/
-        border: 1px dashed blue;
         width:max-content;
         display:flex;
     }
@@ -260,7 +259,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 6fr 7fr;
+            grid-template-rows: 8em 6fr 7fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -270,7 +269,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 2fr 2fr 5fr 3fr;
+            grid-template-rows: 8em 2fr 5fr 3fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -280,7 +279,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 2fr 3fr 2fr 2fr 1fr;
+            grid-template-rows: 8em 3fr 2fr 2fr 1fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -291,11 +290,17 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 2fr 3fr 1fr 3fr 1fr 3fr;
+            grid-template-rows: 8em 3fr 1fr 3fr 1fr 3fr;
             margin:auto;
             width:90%;
             height:min-content;
             margin-bottom: 30px;
+        }
+    #game_grid
+        {
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 8em 6fr 1fr;
         }
     /* Header mobile Rules */
     /* Nav mobile Layout */
@@ -531,9 +536,21 @@ footer
             grid-row:6/span1;
         }
     /* Games Page Mobile Rules*/
+        #game_grid .page_banner
+            {
+                grid-column:1/span 1;
+                grid-row:1/span 1;
+            }
+        #game_grid img
+            {
+                grid-column:1/span 1;
+                grid-row:2/span 1;
+            }
         #game_grid p
             {
-                margin:0 0 3em;
+                grid-column:1/span 1;
+                grid-row: 3/span 1;
+                align-self:center;
             }
     /* Footer Mobile Rules */
     footer
@@ -607,6 +624,12 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
+    #game_grid
+        {
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10em 6fr 1fr;
+        }    
     /* Header Tablet Rules */
     /* Nav Tablet Layout */
     nav
@@ -821,7 +844,25 @@ footer
             grid-column:1/span 4;
             grid-row:5/span 1;
         }
-    /* Footer Rules */
+    /* Game page Tablet rules*/
+    #game_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #game_grid img
+        {
+            grid-column:1/span 1;
+            grid-row:2/span 1;
+            justify-self: center;
+        }
+    #game_grid p
+        {
+            grid-column:1/span 1;
+            grid-row: 3/span 1;
+            align-self:center;
+        }
+/* Footer Rules */
     footer
         {
             display:flex;
@@ -913,6 +954,12 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
+    #game_grid
+        {
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 10em 5fr 1fr;
+        }    
     /* Index Page Desktop Rules*/
     #home_grid .page_banner
         {
@@ -1142,6 +1189,26 @@ footer
     #motion_grid h3, #design_grid h3
         {
             margin:0 0 13px;
+        }
+    /* Game page Tablet rules*/
+    #game_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #game_grid img
+        {
+            grid-column:1/span 1;
+            grid-row:2/span 1;
+            justify-self: center;
+            align-self: center;
+        }
+    #game_grid p
+        {
+            grid-column:1/span 1;
+            grid-row: 3/span 1;
+            align-self:start;
+            justify-self: center;
         }
     /* Footer Rules */
     footer
