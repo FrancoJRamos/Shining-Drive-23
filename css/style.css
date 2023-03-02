@@ -100,6 +100,12 @@ p
     {
         padding:15px 0 10px;
     }
+.page_banner img
+    {
+        object-fit: contain;
+        height:80%;
+
+    }
 .bio_story_button
     {
         width:80px;
@@ -155,7 +161,7 @@ p
     {
         width: 80px;
         height:auto;
-        border: 3px solid #FAC739;
+        border: 3px solid #D9A925;
     }
 .arrow_right
     {
@@ -167,7 +173,6 @@ p
     }
 .arrow_left
     {
-        background:none;
         width: 3em; 
         height: 3em;
         border: 2px solid #FAC739;
@@ -243,6 +248,49 @@ footer
     {
         background-color: #281D54;
     }
+/* Hover Rules*/
+.button_link, .button_link_sub
+    {
+        transition:background-color, color, box-shadow;
+        transition-duration: 0.5s;
+    }
+.button_link:hover, .button_link_sub:hover
+    {
+        background-color:#fac739;
+        color:#294294;
+        box-shadow: 0 0 10px 2px #fac739;
+    }
+.tag_select button
+    {
+        transition: color, background-color, box-shadow;
+        transition-duration: 0.5s;
+    }
+.tag_select button:hover
+    {
+        background-color: #FAC739;
+        color:#294294;
+        box-shadow: 0 0 10px 2px #fac739;
+    }
+.project_select img
+    {
+        transition: border, box-shadow;
+        transition-duration: 0.5s;
+    }
+.project_select img:hover
+    {
+        border: 3px solid #FAC739;
+        box-shadow: 0 0 10px 2px #fac739;
+    }
+.arrow_right, .arrow_left, #motion_interactive_button,#design_interactive_button
+    {
+        transition: background-color, box-shadow;
+        transition-duration: 0.5s;
+    }
+.arrow-right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover
+    {
+        background-color: #FAC739;
+        box-shadow: 0 0 10px 2px #fac739;
+    }
 /* Layout Rules based on Screen Sizes */
 /* Follows Similar Semantic Structure as General Rules */
 
@@ -313,6 +361,8 @@ footer
     nav ul
         {
             flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
+            position:absolute;
+            margin-top: 8em;
         }
     nav li
         {
@@ -410,6 +460,12 @@ footer
             grid-column: 1/span 3;
             grid-row:1/span 1;
             width:100%;
+        }
+    #bio_grid h1
+        {
+            grid-column: 1/span 3;
+            grid-row:1/span 1;
+            z-index:5;
         }
     #bio_grid .arrow_left
         {
@@ -641,10 +697,16 @@ footer
     nav ul
         {
             flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
+            position:absolute;
+            margin-top: 8em;
         }
     nav li
         {
             margin: 0 0 2.5em;
+        }
+    .nav_button
+        {
+            display: none;
         }
     /* Body Tablet Rules */
     .page_banner
@@ -673,7 +735,7 @@ footer
             display:flex;
             justify-content:space-around;
         }
-        #quick_links ul
+    #quick_links ul
         {
             display:grid;
             grid-template-columns: 1fr;
@@ -732,6 +794,12 @@ footer
         {
             grid-column: 2/span 2;
             grid-row: 1/span 1;
+        }
+    #bio_grid h1
+        {
+            grid-column: 2/span 2;
+            grid-row: 1/span 1;
+            z-index:5;
         }
     #bio_grid .arrow_left
         {
@@ -1051,6 +1119,12 @@ footer
         {
             grid-column:1/span 3;
             grid-row:1/span 1;
+        }
+    #bio_grid h1
+        {
+            grid-column:1/span 3;
+            grid-row:1/span 1;
+            z-index: 5;   
         }
     #bio_grid .arrow_left
         {
