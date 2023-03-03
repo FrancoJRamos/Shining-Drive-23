@@ -6,21 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shining Drive Contact Page</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <script src="scripts/contact.js" defer></script>
 </head>
 <body>
     <header>
         <nav >
-                <button type="button"><img src="images/sd-logo.svg" 
-                    alt="Navigation Menu">
-                </button>
-                <ul class="drop_down_nav ">
-                    <li><a href="index.html" class="button_link">Home</a></li>
-                    <li><a href="contact.html" class="button_link">Contact</a></li>
-                    <li><a href="bio.html" class="button_link">Bio</a></li>
-                    <li><a href="motion.html" class="button_link">Motion</a></li>
-                    <li><a href="design.html" class="button_link">Design</a></li>
-                    <li><a href="game.html" class="button_link">Games</a></li>
-                </ul>
+            <button type="button">
+                <img src="images/sd-logo.svg" alt="Navigation Menu">
+            </button>
+            <ul id="drop_down_nav ">
+                <li><a href="index.html" class="button_link">Home</a></li>
+                <li><a href="contact.html" class="button_link">Contact</a></li>
+                <li><a href="bio.html" class="button_link">Bio</a></li>
+                <li><a href="motion.html" class="button_link">Motion</a></li>
+                <li><a href="design.html" class="button_link">Design</a></li>
+                <li><a href="game.html" class="button_link">Games</a></li>
+            </ul>
         </nav>
     </header>
 
@@ -36,7 +37,7 @@
                     Resume
                     <img class="arrow_down" src="images/sd-arrow.svg" alt="Toggle Panel">
                 </button>
-                <div class="accordion_panel">
+                <div class="accordion_panel" id="resume_panel">
                     <p>Click on the link to download a copy of my Resume</p>
                     <a href="media/FrancoJRamos_Resume.pdf" download>Resume</a>
                 </div>
@@ -47,7 +48,7 @@
                     Email
                     <img class="arrow_down" src="images/sd-arrow.svg" alt="Toggle Panel">
                 </button>
-                <div class="accordion_panel">
+                <div class="accordion_panel" id="email_panel">
                     <p>To send an email, please complete the form below:</p>
                     <form method="post" id="my-form">
                         <fieldset>
@@ -84,12 +85,12 @@
                     Social Media
                     <img class="arrow_down" src="images/sd-arrow.svg" alt="Toggle Panel">
                 </button>
-                <div class="accordion_panel">
+                <div class="accordion_panel" id="more_panel">
                     <p>Additional Work found here</p>
                     <ul class="imagelinks ">
-                        <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank"><img src = "images/contact_button_1.png" alt="Instagram profile" ></a></li>
-                        <li><a href="https://www.behance.net/francoramos3" target="_blank"><img src = "images/contact_button_2.png" alt="Behance profile" ></a></li>
-                        <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank"><img src = "images/contact_button_3.png" alt="Youtube profile" ></a></li>
+                        <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank"><img src = "images/buttons/contact_button_1.jpg" alt="Instagram profile" ></a></li>
+                        <li><a href="https://www.behance.net/francoramos3" target="_blank"><img src = "images/buttons/contact_button_2.jpg" alt="Behance profile" ></a></li>
+                        <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank"><img src = "images/buttons/contact_button_3.jpg" alt="Youtube profile" ></a></li>
                     </ul>
                 </div>
             </div>

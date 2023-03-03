@@ -8,10 +8,12 @@ nav,.page_banner, #profile, #quick_links, #contact_resume, #contact_email, #cont
     }
 */
 /*Debuging div sizes cheat sheet*/
+/*
 .test_div
     {
         background-color: bisque;
     }
+*/
 /*Style guide cheat sheet
 
 dark blue:  #281D54
@@ -238,6 +240,12 @@ nav ul
     {
         text-decoration: underline;
     }
+#quick_links ul img, .accordion_panel img
+    {
+        width: 80px;
+        height:auto;
+        border: 3px solid #FAC739;
+    }
 /* Bio Page Rules*/
 #bio_description, #bio_story
     {
@@ -271,24 +279,23 @@ footer
         color:#294294;
         box-shadow: 0 0 10px 2px #fac739;
     }
-.project_select img
+.project_select img, .accordion_panel img
     {
         transition: border, box-shadow;
         transition-duration: 0.5s;
     }
-.project_select img:hover
+.project_select img:hover, .accordion_panel img:hover
     {
         border: 3px solid #FAC739;
         box-shadow: 0 0 10px 2px #fac739;
     }
 .arrow_right, .arrow_left, #motion_interactive_button,#design_interactive_button
     {
-        transition: background-color, box-shadow;
+        transition: box-shadow;
         transition-duration: 0.5s;
     }
 .arrow-right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover
     {
-        background-color: #FAC739;
         box-shadow: 0 0 10px 2px #fac739;
     }
 /* Layout Rules based on Screen Sizes */
@@ -302,6 +309,10 @@ footer
         {
             width: 100%;
             text-align: center;
+        }
+    section
+        {
+            min-height: 600px;
         }
     #home_grid
         {
@@ -425,14 +436,7 @@ footer
         {
             margin: 0 10px;
         }
-    #quick_links ul img
-        {
-            width: 80px;
-            height:auto;
-            border: 3px solid #FAC739;
-        }
     /* contact mobile rules */
-    
     #contact_resume
         {
             width:100%;
@@ -453,6 +457,10 @@ footer
             grid-column:1;
             grid-row: 4/ span 1;
             margin:0 0 10px;
+        }
+    .accordion_panel img
+        {
+            margin: 0 1em;
         }
     /* Bio Page mobile rules*/
     #bio_grid .page_banner
@@ -592,22 +600,22 @@ footer
             grid-row:6/span1;
         }
     /* Games Page Mobile Rules*/
-        #game_grid .page_banner
-            {
-                grid-column:1/span 1;
-                grid-row:1/span 1;
-            }
-        #game_grid img
-            {
-                grid-column:1/span 1;
-                grid-row:2/span 1;
-            }
-        #game_grid p
-            {
-                grid-column:1/span 1;
-                grid-row: 3/span 1;
-                align-self:center;
-            }
+    #game_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #game_grid img
+        {
+            grid-column:1/span 1;
+            grid-row:2/span 1;
+        }
+    #game_grid p
+        {
+            grid-column:1/span 1;
+            grid-row: 3/span 1;
+            align-self:center;
+        }
     /* Footer Mobile Rules */
     footer
         {
@@ -750,13 +758,6 @@ footer
     .quick_links_item
         {
             margin: 5% 0 5%;
-        }
-
-    #quick_links ul img
-        {
-            width: 80px;
-            height:auto;
-            border: 3px solid #FAC739;
         }
     /* Contact Page Tablet Rules*/
     #contact_resume
@@ -930,7 +931,7 @@ footer
             grid-row: 3/span 1;
             align-self:center;
         }
-/* Footer Rules */
+    /* Footer Rules */
     footer
         {
             display:flex;
@@ -1071,13 +1072,6 @@ footer
         {
             margin: 5% 0 5%;
         }
-
-    #quick_links ul img
-        {
-            width: 80px;
-            height:auto;
-            border: 3px solid #FAC739;
-        }
     /* Contact Page Desktop Rules*/
     #contact_grid .page_banner
         {
@@ -1113,6 +1107,10 @@ footer
     #contact_more li
         {
             margin-right: 1em;
+        }
+    .accordion_panel img, .accordion_panel p
+        {
+            margin: 0 0 1em;
         }
     /* Bio page Desktop rules*/
     #bio_grid .page_banner
