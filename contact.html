@@ -5,16 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shining Drive Contact Page</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico?">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="scripts/contact.js" defer></script>
+    <script src="scripts/nav.js" defer></script>
 </head>
 <body>
     <header>
-        <nav >
-            <button type="button">
+        <nav>
+            <button type="button" class="nav_button">
                 <img src="images/sd-logo.svg" alt="Navigation Menu">
             </button>
-            <ul id="drop_down_nav ">
+            <ul id="drop_down_nav">
                 <li><a href="index.html" class="button_link">Home</a></li>
                 <li><a href="contact.html" class="button_link">Contact</a></li>
                 <li><a href="bio.html" class="button_link">Bio</a></li>
@@ -22,9 +24,10 @@
                 <li><a href="design.html" class="button_link">Design</a></li>
                 <li><a href="game.html" class="button_link">Games</a></li>
             </ul>
+            <div id="nav_overlay"></div>
         </nav>
     </header>
-
+    
     <main>
         <section id="contact_grid">
             <div class="page_banner">
@@ -38,7 +41,7 @@
                     <img class="arrow_down" src="images/sd-arrow.svg" alt="Toggle Panel">
                 </button>
                 <div class="accordion_panel" id="resume_panel">
-                    <p>Click on the link to download a copy of my Resume</p>
+                    <p>To download a copy of my resume, click the link below</p>
                     <a href="media/FrancoJRamos_Resume.pdf" download>Resume</a>
                 </div>
             </div>

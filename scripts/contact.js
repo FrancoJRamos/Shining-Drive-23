@@ -20,7 +20,7 @@ let panelButtons = document.getElementsByClassName("accordion");
 
 //set all panels to a closed behavior on load
 window.addEventListener("load", function(){
-    console.log("an anonymous function has been called on load");
+    //console.log("an anonymous function has been called on load");
     resume.style.display = "none";
     emailForm.style.display = "none";
     more.style.display = "none";
@@ -37,9 +37,12 @@ for (i=0; i<panelButtons.length; i++){
 
         //use an if else statement to toggle
         if(this.nextElementSibling.style.display == "none"){
+            //console.log(this.childNodes);
+            this.childNodes[1].style.transform = "rotate(0deg)";
             this.nextElementSibling.style.display = "block";
         }
         else{
+            this.childNodes[1].style.transform = "rotate(180deg)";
             this.nextElementSibling.style.display = "none";
         }
     })

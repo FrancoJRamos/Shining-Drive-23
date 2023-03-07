@@ -56,7 +56,25 @@ p
         margin:10px 0 10px;
     }
 /* Class Rules */
-
+.nav_button
+    {
+        z-index:8;
+    }
+#nav_overlay
+    {
+        position: fixed; /* Sit on top of the page content */
+        display: none; /* Hidden by default */
+        width: 100%; /* Full width (cover the whole page) */
+        height: 100%; /* Full height (cover the whole page) */
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #281D5480; /* Black background with opacity */
+        z-index: 7; /* Specify a stack order in case you're using a different order for other elements */
+        cursor: pointer; /* Add a pointer on hover */
+        /* taken from: https://www.w3schools.com/howto/howto_css_overlay.asp*/
+    }
 .button_link
     {
         display:block;
@@ -257,6 +275,7 @@ footer
         background-color: #281D54;
     }
 /* Hover Rules*/
+/* Index/Nav Hover Rules*/
 .button_link, .button_link_sub
     {
         transition:background-color, color, box-shadow;
@@ -268,6 +287,17 @@ footer
         color:#294294;
         box-shadow: 0 0 10px 2px #fac739;
     }
+/* Contact Hover Rules*/
+.accordion
+    {
+        transition: box-shadow;
+        transition-duration: 0.5s; 
+    }
+.accordion:hover
+    {
+        box-shadow: 0 0 10px 2px #fac739;
+    }
+/* Motion/Design/Gallery Hover Rules*/
 .tag_select button
     {
         transition: color, background-color, box-shadow;
@@ -294,7 +324,7 @@ footer
         transition: box-shadow;
         transition-duration: 0.5s;
     }
-.arrow-right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover
+.arrow_right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover
     {
         box-shadow: 0 0 10px 2px #fac739;
     }
@@ -360,6 +390,8 @@ footer
             display:grid;
             grid-template-columns: 1fr;
             grid-template-rows: 8em 6fr 1fr;
+            width:90%;
+            margin: auto;
         }
     /* Header mobile Rules */
     /* Nav mobile Layout */
@@ -368,11 +400,13 @@ footer
             flex-direction: column;/*flex-direction should change with screen size*/
             align-items: center;/*note to self: align-items rule for adjusting on the horizontal axis, justify-content for vertical*/
             margin:auto;
+             
         }
     nav ul
         {
             flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
             position:absolute;
+            z-index: 10;
             margin-top: 8em;
         }
     nav li
@@ -599,7 +633,7 @@ footer
             grid-column: 1/span 3;
             grid-row:6/span1;
         }
-    /* Games Page Mobile Rules*/
+    /* Game Page Mobile Rules*/
     #game_grid .page_banner
         {
             grid-column:1/span 1;
@@ -609,6 +643,7 @@ footer
         {
             grid-column:1/span 1;
             grid-row:2/span 1;
+            width:100%;
         }
     #game_grid p
         {
@@ -693,6 +728,8 @@ footer
             display:grid;
             grid-template-columns: 1fr;
             grid-template-rows: 10em 6fr 1fr;
+            width:80%;
+            margin: auto;
         }    
     /* Header Tablet Rules */
     /* Nav Tablet Layout */
@@ -701,20 +738,18 @@ footer
             flex-direction: column;/*flex-direction should change with screen size*/
             align-items: center;/*note to self: align-items rule for adjusting on the horizontal axis, justify-content for vertical*/
             margin:auto;
+             
         }
     nav ul
         {
             flex-direction:column;/*flex direction for the button array, seperate from the nav array*/
             position:absolute;
+            z-index: 10;
             margin-top: 8em;
         }
     nav li
         {
             margin: 0 0 2.5em;
-        }
-    .nav_button
-        {
-            display: none;
         }
     /* Body Tablet Rules */
     .page_banner
@@ -964,6 +999,7 @@ footer
             flex-direction: row-reverse;/*flex-direction should change with screen size*/
             align-items: center;/*note to self: align-items rule for adjusting on the horizontal axis, justify-content for vertical*/
             margin:auto;
+             
         }
     nav ul
         {
@@ -1028,6 +1064,8 @@ footer
             display:grid;
             grid-template-columns: 1fr;
             grid-template-rows: 10em 5fr 1fr;
+            width:90%;
+            margin: auto;
         }    
     /* Index Page Desktop Rules*/
     #home_grid .page_banner
@@ -1262,7 +1300,7 @@ footer
         {
             margin:0 0 13px;
         }
-    /* Game page Tablet rules*/
+    /* Game page desktop rules*/
     #game_grid .page_banner
         {
             grid-column:1/span 1;
