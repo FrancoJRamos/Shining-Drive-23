@@ -45,6 +45,10 @@ h1, h2, h3
         color: #fac739;
         font-family: 'Noto Sans Display', sans-serif;
     }
+h1
+    {
+        z-index: 5;
+    }
 a
     {
         color: #fac739;
@@ -124,7 +128,7 @@ p
     {
         object-fit: contain;
         height:80%;
-
+        border: 1px dashed orange;
     }
 .bio_story_button
     {
@@ -414,13 +418,17 @@ footer
             margin: 0 0 2.5em;
         }
     /* Body mobile Rules */
-    .page_banner
-        {
-            grid-column:1;
-            grid-row:1/span1;
-            width:100%;
-        }
     /* index page mobile rules */
+    #home_grid h1
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #home_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
     #profile
         {
             grid-column:1;
@@ -471,6 +479,16 @@ footer
             margin: 0 10px;
         }
     /* contact mobile rules */
+    #contact_grid h1
+        {
+            grid-column:1/span 1;
+            grid-row: 1/span 1;
+        }
+    #contact_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row: 1/span 1;
+        }
     #contact_resume
         {
             width:100%;
@@ -507,7 +525,6 @@ footer
         {
             grid-column: 1/span 3;
             grid-row:1/span 1;
-            z-index:5;
         }
     #bio_grid .arrow_left
         {
@@ -519,11 +536,11 @@ footer
         {
             grid-column: 2/span 1;
             grid-row:2/span1;
-            width:100%;
+            justify-self:center;
+            width:11em;
             height:15em;
             display:flex;
-            flex-direction: row;
-            overflow-x: scroll;
+            border:1px solid red;
         }
     #bio_interactive img
         {
@@ -557,7 +574,6 @@ footer
     #bio_story_select ul
         {
             display:flex;
-
         }
     #bio_story_select li
         {
@@ -567,40 +583,48 @@ footer
     #motion_grid .page_banner, #design_grid .page_banner
         {
             grid-column: 1/span 3;
-            grid-row:1/span1;
+            grid-row:1/span 1;
             width:100%;
+        }
+    #motion_grid h1, #design_grid h1
+        {
+            grid-column: 1/span 3;
+            grid-row:1/span 1;
         }
     #motion_grid .arrow_left, #design_grid .arrow_left
         {
             grid-column: 1/span 1;
-            grid-row:2/span1;
+            grid-row:2/span 1;
             justify-self: center;
         }
     #motion_interactive, #design_interactive
         {
             grid-column: 2/span 1;
-            grid-row:2/span1;
-            width:100%;
-            height:15em;
-            z-index: 1;
-        }
-    .project_collection
-        {
-            display:flex;
-            margin: 0 0 5px;
-            width:15em;
-        }
-    .project_collection img
-        {
-            object-fit: contain;
-            width:auto;
+            grid-row:2/span 1;
+            width: 17em;
             height:10em;
+            display:flex;
+            justify-content: center;
             margin:auto;
+            border:1px solid red;
         }
+    #motion_interactive .portrait, #design_interactive .portrait
+        {
+            height:100%;
+            width:auto;
+            border:1px dashed salmon;
+        }
+    #motion_interactive .landscape, #design_interactive .landscape
+        {
+            height:auto;
+            width:100%;
+            border:1px dashed salmon;
+        }
+
     #motion_interactive_button, #design_interactive_button
         {
             grid-column: 2/span 1;
-            grid-row:2/span1;
+            grid-row:2/span 1;
             z-index: 5;
             justify-self: end;
             margin: 5px 5px;
@@ -608,7 +632,7 @@ footer
     #motion_grid .arrow_right, #design_grid .arrow_right
         {
             grid-column: 3/span 1;
-            grid-row:2/span1;
+            grid-row:2/span 1;
             justify-self: center;
         }
     #motion_grid .project_collection_select, #design_grid .project_collection_select
@@ -621,7 +645,7 @@ footer
     #motion_description, #design_description
         {
             grid-column: 1/span 3;
-            grid-row:4/span1;
+            grid-row:4/span 1;
         }
     #motion_grid .resource_list,#design_grid .resource_list
         {
@@ -631,10 +655,15 @@ footer
     #motion_project_select, #design_project_select
         {
             grid-column: 1/span 3;
-            grid-row:6/span1;
+            grid-row:6/span 1;
         }
     /* Game Page Mobile Rules*/
     #game_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #game_grid h1
         {
             grid-column:1/span 1;
             grid-row:1/span 1;
@@ -752,13 +781,17 @@ footer
             margin: 0 0 2.5em;
         }
     /* Body Tablet Rules */
-    .page_banner
-        {
-            grid-column:1;
-            grid-row:1/span1;
-            width:100%;
-        }
     /* Index Page Tablet Rules*/
+    #home_grid h1
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #home_grid .page_banner
+        {
+            grid-column: 1/span 1;
+            grid-row: 1/span 1;
+        }
     #profile
         {
             display:flex;
@@ -795,6 +828,16 @@ footer
             margin: 5% 0 5%;
         }
     /* Contact Page Tablet Rules*/
+    #contact_grid .page_banner
+        {
+            grid-column: 1/span 1;
+            grid-row: 1/span 1;
+        }
+    #contact_grid h1
+        {
+            grid-column: 1/span 1;
+            grid-row: 1/span 1;
+        }
     #contact_resume
         {
             width:100%;
@@ -835,7 +878,6 @@ footer
         {
             grid-column: 2/span 2;
             grid-row: 1/span 1;
-            z-index:5;
         }
     #bio_grid .arrow_left
         {
@@ -854,9 +896,10 @@ footer
         {
             grid-column:2/span 1;
             grid-row:2/span 1;
+            justify-self: center;
             display:flex;
-            overflow-x: scroll;
-            height:25em;
+            height:20em;
+            width:15em;
         }
     #bio_interactive img
         {
@@ -889,22 +932,32 @@ footer
             grid-column:1/span 4;
             grid-row:1/span 1;
         }
+    #motion_grid h1, #design_grid h1
+        {
+            grid-column:1/span 4;
+            grid-row:1/span 1;
+        }
     #motion_interactive, #design_interactive
         {
             grid-column:2/span 1;
             grid-row:2/span 1;
-            height: 15em;
-            width:100%;
-            place-self:center;
-        }
-    .project_collection
-        {
-            width:20em;
-        }
-    .project_collection img
-        {
+            width: 21em;
             height:12em;
+            display:flex;
+            justify-content: center;
+            border:1px solid red;
+        }
+    #motion_interactive .portrait, #design_interactive .portrait
+        {
+            height:100%;
             width:auto;
+            border:1px dashed salmon;
+        }
+    #motion_interactive .landscape, #design_interactive .landscape
+        {
+            height:auto;
+            width:100%;
+            border:1px dashed salmon;
         }
     #motion_interactive_button, #design_interactive_button
         {
@@ -1043,7 +1096,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
-            grid-template-rows: 8em 3fr 1fr 1fr 2fr;
+            grid-template-rows: 8em 3fr 1fr 1fr ;
             margin:auto;
             width:80%;
             height:min-content;
@@ -1053,9 +1106,9 @@ footer
         {
             display:grid;
             grid-template-columns: 2fr 1fr 4fr 1fr 6fr 2fr;
-            grid-template-rows: 8em 2fr 1fr 1fr 2fr;
+            grid-template-rows: 8em 2fr 4em 1fr 2fr;
             margin:auto;
-            width:90%;
+            width:80%;
             height:min-content;
             margin-bottom: 30px;
         }
@@ -1063,14 +1116,19 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 10em 5fr 1fr;
-            width:90%;
+            grid-template-rows: 8em 5fr 1fr;
+            width:80%;
             margin: auto;
         }    
     /* Index Page Desktop Rules*/
     #home_grid .page_banner
         {
             grid-column: 1/span 2;
+            grid-row: 1/span 1;
+        }
+    #home_grid h1
+        {
+            grid-column:1/span 2;
             grid-row: 1/span 1;
         }
     #profile
@@ -1112,6 +1170,11 @@ footer
         }
     /* Contact Page Desktop Rules*/
     #contact_grid .page_banner
+        {
+            grid-column:1/span 3;
+            grid-row:1/span 1;
+        }
+    #contact_grid h1
         {
             grid-column:1/span 3;
             grid-row:1/span 1;
@@ -1160,7 +1223,6 @@ footer
         {
             grid-column:1/span 3;
             grid-row:1/span 1;
-            z-index: 5;   
         }
     #bio_grid .arrow_left
         {
@@ -1181,8 +1243,10 @@ footer
             grid-column:3/span 1;
             grid-row:2/span 1;
             display:flex;
-            overflow-x: scroll;
+            justify-self: center;
             height:20em;
+            width:15em;
+            border:1px solid red;
         }
     #bio_interactive img
         {
@@ -1218,22 +1282,32 @@ footer
             grid-column:1/span 4;
             grid-row:1/ span 1;
         }
+    #motion_grid h1, #design_grid h1
+        {
+            grid-column:1/span 4;
+            grid-row:1/span 1;
+        }
     #motion_interactive, #design_interactive
         {
             grid-column:3/span 1;
             grid-row:2/span 1;
-            place-self: center;
-        }
-    .project_collection
-        {
-            width:25em;
-            overflow-x: scroll;
-        }
-    #motion_interactive img,#design_interactive img
-        {
-            object-fit: contain;
+            width: 25em;
             height:14em;
+            display:flex;
+            justify-content: center;
+            border:1px solid red;
+        }
+    #motion_interactive .portrait, #design_interactive .portrait
+        {
+            height:100%;
             width:auto;
+            border:1px dashed salmon;
+        }
+    #motion_interactive .landscape, #design_interactive .landscape
+        {
+            height:auto;
+            width:100%;
+            border:1px dashed salmon;
         }
     #motion_interactive_button, #design_interactive_button
         {
@@ -1302,6 +1376,11 @@ footer
         }
     /* Game page desktop rules*/
     #game_grid .page_banner
+        {
+            grid-column:1/span 1;
+            grid-row:1/span 1;
+        }
+    #game_grid h1
         {
             grid-column:1/span 1;
             grid-row:1/span 1;

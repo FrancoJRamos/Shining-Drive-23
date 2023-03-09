@@ -21,7 +21,7 @@ let navButtons = document.getElementsByClassName("nav_button");
 if(window.innerWidth<1279){
     //console.log("window is in tablet/mobile view");
     window.addEventListener("load", function(){
-        console.log("an anonymous function has been called on load");
+        //console.log("an anonymous function has been called on load");
         navList.style.display = "none";
     })
     
@@ -31,7 +31,7 @@ if(window.innerWidth<1279){
         //console.log("this is the "+i+"th iteration" );
         
         navButtons[i].addEventListener("click", function(){
-            //console.log(navButtons[0]);
+            //console.log(navButtons[0].innerHTML);
             //console.log(this.nextElementSibling);
     
             //if the nav list is hidden
@@ -39,6 +39,10 @@ if(window.innerWidth<1279){
                 //turn on the overlay element
                 //console.log(overlay);
                 overlay.style.display = "block";
+
+                //change button innerHTML into the exit button
+                navButtons[0].innerHTML = "<img src='images/sd-logo-inverse-cross.svg' alt='Navigation Menu'>";
+
                 //turn on the nav list element
                 this.nextElementSibling.style.display = "block";
             }
@@ -46,6 +50,10 @@ if(window.innerWidth<1279){
             else{
                 //turn off the overlay element
                 overlay.style.display = "none";
+
+                //change button innerHTML into the exit button
+                navButtons[0].innerHTML = "<img src='images/sd-logo.svg' alt='Navigation Menu'>";
+
                 //turn off the nav list element
                 this.nextElementSibling.style.display = "none";
             }
