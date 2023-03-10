@@ -298,12 +298,12 @@ footer
         box-shadow: 0 0 10px 2px #fac739;
     }
 /* Contact Hover Rules*/
-.accordion
+.accordion, #bio_grid label img
     {
         transition: box-shadow;
         transition-duration: 0.5s; 
     }
-.accordion:hover
+.accordion:hover, #bio_grid label img:hover
     {
         box-shadow: 0 0 10px 2px #fac739;
     }
@@ -718,6 +718,10 @@ footer
             width: 100%;
             text-align: center;
         }
+    section
+        {
+            min-height:800px;
+        }
     #home_grid
         {
             display:grid;
@@ -1008,7 +1012,7 @@ footer
             grid-row:5/span 1;
         }
     /* Game page Tablet rules*/
-    #game_grid .page_banner
+    #game_grid .page_banner, #game_grid h1
         {
             grid-column:1/span 1;
             grid-row:1/span 1;
