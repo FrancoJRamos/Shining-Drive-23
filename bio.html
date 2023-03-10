@@ -8,6 +8,7 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico?">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="scripts/nav.js" defer></script>
+    <script src="scripts/bio.js" defer></script>
 </head>
 <body>
     <header>
@@ -38,7 +39,7 @@
             <button class="arrow_right"><img src="images/sd-arrow.svg" alt="Right Arrow"></button>
             
             <div id="bio_interactive">
-                <img src="images/bio/bio01-engine.png" alt="story title">
+                <img src="images/bio/bio01.png" alt="engineering image">
             </div>
 
             <div id="bio_description">
@@ -47,18 +48,43 @@
             </div>
 
             <div id="bio_story">
+                <h3>story #</h3>
                 <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p>
             </div>
 
             <div id="bio_story_select">
                 <h2>Additional Stories</h2>
+                <!--change unordered list into a checkbox form, assigning values to each input to call from in JS
                 <ul>
-                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story01.jpg" alt="story 01"></button></li>
-                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story02.jpg" alt="story 02"></button></li>
-                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story03.jpg" alt="story 03"></button></li>
-                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story04.jpg" alt="story 04"></button></li>
-                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story05.jpg" alt="story 05"></button></li>
+                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story01.jpg" alt="story 1"></button></li>
+                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story02.jpg" alt="story 2"></button></li>
+                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story03.jpg" alt="story 3"></button></li>
+                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story04.jpg" alt="story 4"></button></li>
+                    <li><button class="bio_story_button"><img src="images/buttons/bio-button-story05.jpg" alt="story 5"></button></li>
                 </ul>
+                -->
+                <form>
+                    <input type="radio" class="radio_button" id="bio_story_button_01" name="story_select" value="1" />
+                    <label for="bio_story_button_01">
+                        <img class="bio_story_button" src="images/buttons/bio-button-story01.jpg" alt="story 1">
+                    </label>
+                    <input type="radio" class="radio_button" id="bio_story_button_02" name="story_select" value="2" />
+                    <label>
+                        <img class="bio_story_button" src="images/buttons/bio-button-story02.jpg" alt="story 2">
+                    </label>
+                    <input type="radio" class="radio_button" id="bio_story_button_03" name="story_select" value="3" />
+                    <label>
+                        <img class="bio_story_button" src="images/buttons/bio-button-story03.jpg" alt="story 3">
+                    </label>
+                    <input type="radio" class="radio_button" id="bio_story_button_04" name="story_select" value="4" />
+                    <label>
+                        <img class="bio_story_button" src="images/buttons/bio-button-story04.jpg" alt="story 4">
+                    </label>
+                    <input type="radio" class="radio_button" id="bio_story_button_05" name="story_select" value="5" />
+                    <label>
+                        <img class="bio_story_button" src="images/buttons/bio-button-story05.jpg" alt="story 5">
+                    </label>
+                </form>
             </div>
         </section>
     </main>

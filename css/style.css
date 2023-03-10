@@ -130,16 +130,22 @@ p
         height:80%;
         border: 1px dashed orange;
     }
+.bio_story_select form
+    {
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:space-between;
+    }
+.radio_button
+    {
+        background-color:#FAC739;
+    }
 .bio_story_button
     {
         width:80px;
-        background:none;
-    }
-.bio_story_button img
-    {
-        max-width: 100%;
-        height:auto;
-        border: 3px solid #FAC739;
+        border: 3px solid #D9A925;
+        cursor:pointer;
+        margin:0 8px;
     }
 .project_collection_select
     {
