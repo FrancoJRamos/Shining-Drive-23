@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shining Drive Design Page</title>
-    <link rel="icon" type="image/x-icon" href="/images/favicon.ico?">
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="scripts/nav.js" defer></script>
+    <script src="scripts/motion-design.js" defer></script>
 </head>
 <body>
     <header>
@@ -27,7 +28,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="design">
         <section id="design_grid">
             <h1 class="page_header">Design</h1>
             <div class="page_banner">
@@ -35,35 +36,27 @@
             </div>
 
             <div id="design_interactive">
-                <img class ="portrait" src="images/design/design-project01-collection01.jpg" alt="Work in Progress Image">
+                <img class ="portrait" src="images/design/design-1-1.jpg" alt="Work in Progress Image">
             </div>
 
             <button id="design_interactive_button">
-                <object type="image/svg+xml" data="images/sd-logo-inverse-dark.svg">
-                    <img src="images/sd-logo-inverse.svg" alt="click for a larger version of file">
-                </object>
+                <img src="images/sd-logo-inverse-dark.svg" alt="navigate to project specific page">
             </button>
 
             <button class="arrow_left"><img src="images/sd-arrow.svg" alt="Left Arrow"></button>
             <button class="arrow_right"><img src="images/sd-arrow.svg" alt="Right Arrow"></button>
 
-            <ul class="project_collection_select">
-                <li><button>
-                    <object type="image/svg+xml" data="images/sd-logo-inverse-dark.svg">
-                        <img src="images/sd-logo-inverse.svg" alt="Project Section 1">
-                    </object>
+            <ul class="project_section">
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 1">
                 </button></li>
 
-                <li><button>
-                    <object type="image/svg+xml" data="images/sd-logo-inverse-dark.svg">
-                        <img src="images/sd-logo-inverse.svg" alt="Project Section 1">
-                    </object>
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 2">
                 </button></li>
 
-                <li><button>
-                    <object type="image/svg+xml" data="images/sd-logo-inverse-dark.svg">
-                        <img src="images/sd-logo-inverse.svg" alt="Project Section 1">
-                    </object>
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 3">
                 </button></li>
             </ul>
             
@@ -101,6 +94,7 @@
 
                 <div class="project_select">
                     <h3>Additional Projects</h3>
+                    <!--
                     <ul>
                         <li><button><img src="images/buttons/design-button-project01.jpg" alt="Self-Directed Action Shot"></button></li>
                         <li><button><img src="images/buttons/design-button-project02.jpg" alt="Lip Sync Study"></button></li>
@@ -110,6 +104,37 @@
                         <li><button><img src="images/buttons/design-button-project06.jpg" alt="Creature design Study"></button></li>
                         <li><button><img src="images/buttons/design-button-project07.jpg" alt="Animatic Short"></button></li>
                     </ul>
+                    -->
+                    <form>
+                        <input type="radio" id="project_01" name="project_select_form" value="1">
+                            <label for="project_01">
+                                <img src="images/buttons/design-button-project01.jpg" alt="celebrity portrait"></button>
+                            </label>
+                        <input type="radio" id="project_02" name="project_select_form" value="2">
+                            <label for="project_02">
+                                <img src="images/buttons/design-button-project02.jpg" alt="designer study"></button>
+                            </label>
+                        <input type="radio" id="project_03" name="project_select_form" value="3">
+                            <label for="project_03">
+                                <img src="images/buttons/design-button-project03.jpg" alt="Multimedia Animatic"></button>
+                            </label>
+                        <input type="radio" id="project_04" name="project_select_form" value="4">
+                            <label for="project_04">
+                                <img src="images/buttons/design-button-project04.jpg" alt="FX design Study"></button>
+                            </label>
+                        <input type="radio" id="project_05" name="project_select_form" value="5">
+                            <label for="project_05">
+                                <img src="images/buttons/design-button-project05.jpg" alt="Minimalism Animation">
+                            </label>
+                        <input type="radio" id="project_06" name="project_select_form" value="6">
+                            <label for="project_06">
+                                <img src="images/buttons/design-button-project06.jpg" alt="Creature design Study">
+                            </label>
+                        <input type="radio" id="project_07" name="project_select_form" value="7">
+                            <label for="project_07">
+                                <img src="images/buttons/design-button-project07.jpg" alt="Animatic Short"></button>
+                            </label>
+                    </form>
                 </div>
             </div>
         </section>
