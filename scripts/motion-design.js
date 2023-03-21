@@ -24,15 +24,17 @@ let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Proj
 window.addEventListener("load",updateSection);
 
 //check if the page is on design or motion page
+let pageCheck =document.getElementsByClassName("page_check");
+//console.log(pageCheck[0]);
 let page="";
-let fileFormat=""
+let fileFormat="";
 
     //console.log(document.childNodes[1].childNodes[3].childNodes[3].id);
-    if(document.childNodes[1].childNodes[3].childNodes[3].id == "motion"){
-        page="motion"
-        fileFormat="gif"
-    }else if(document.childNodes[1].childNodes[3].childNodes[3].id =="design"){
-        page="design"
+    if(pageCheck[0].id == "motion"){
+        page="motion";
+        fileFormat="gif";
+    }else if(pageCheck[0].id =="design"){
+        page="design";
         fileFormat="jpg";
     }
     //console.log("current page is: "+page);
@@ -83,7 +85,7 @@ rightArrow[0].addEventListener("click", function(){
     }
     sectionCount=1;
     updateSection();
-})
+});
 
 leftArrow[0].addEventListener("click", function(){
     //console.log("left arrow has been clicked");
@@ -96,7 +98,7 @@ leftArrow[0].addEventListener("click", function(){
     }
     sectionCount=1;
     updateSection();
-})
+});
 
 //update projectCount by which radio button is clicked
     //store radio button array
@@ -107,7 +109,7 @@ for (let i=0; i<projectButtons.length; i++){
     projectButtons[i].addEventListener("change",function(){
         //console.log("radio button has been changed");
         if(projectButtons[i].checked){
-            projectCount = Number(projectButtons[i].value)
+            projectCount = Number(projectButtons[i].value);
             //initialize sectionCount back to 1
             sectionCount = 1;
             updateSection();
@@ -120,7 +122,7 @@ for (let i=0; i<projectButtons.length; i++){
 function initializeSectionButtons(){
     for (let j=0; j<sectionButtons.length; j++){
         let jUpdate=j+1;
-        sectionButtons[j].innerHTML = "<img src='images/sd-logo-inverse-dark.svg' alt='Project Section "+jUpdate+"'>"
+        sectionButtons[j].innerHTML = "<img src='images/sd-logo-inverse-dark.svg' alt='Project Section "+jUpdate+"'>";
         sectionButtons[j].style.opacity= "0.5";
     }
 }
@@ -142,4 +144,52 @@ function updateSection(){
     sectionButtons[sectionCount-1].innerHTML="<img src='images/sd-logo-inverse.svg' alt='Project Section "+sectionCount+"'>";
     sectionButtons[sectionCount-1].style.opacity= "1";
     Updateproject();
+}
+
+//Create Overlay by clicking on button over project image
+let overlayButton = document.getElementsByClassName("project_overlay_button");
+let overlayDiv = document.getElementById("project_overlay");
+
+overlayDiv.style.display="none";
+
+for(let i=0; i<overlayButton.length;i++){
+    overlayButton[i].addEventListener("click",function(){
+        //check if the overlay is hidden or not and execute script
+            //default behavior: if it is hidden
+        if (overlayDiv.style.display =="none"){
+                //console.log("overdiv off is entered");
+            //turn on the overlay div
+            overlayDiv.style.display="block";
+            //change the button into the cross/exit button
+                //console.log(overlayButton[0].innerHTML);
+            overlayButton[0].innerHTML ="<img src='images/sd-logo-inverse-cross.svg' alt='click for a smaller view of file'>";
+            //change the img row & column style to take up the entire grid
+                //grid changes based on device view
+            //mobile view
+            if(innerWidth<=750){
+
+            }
+            //tablet view
+            else if(innerWidth>750 && innerWidth<=1280){
+
+            }
+            //desktop view
+            else if(innerWidth>1280){
+                
+            }
+
+        }else if(overlayDiv.style.display =="block"){
+                //console.log("overdiv is on is entered");
+            //turn off the overlay div
+            overlayDiv.style.display="none";
+            //change the button into the inverse logo
+            overlayButton[0].innerHTML ="<img src='images/sd-logo-inverse.svg' alt='click for a larger view of file'>";
+        };
+        
+        //console.log("overlayButton has been clicked");
+        //console.log(overlayDiv);
+        
+        //inverse the width & height of the img style
+        //change its location using the row & column
+    });
 }

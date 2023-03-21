@@ -41,7 +41,7 @@ if(window.innerWidth<1279){
                 overlay.style.display = "block";
 
                 //change button innerHTML into the exit button
-                navButtons[0].innerHTML = "<img src='images/sd-logo-inverse-cross.svg' alt='Navigation Menu'>";
+                navButtons[0].innerHTML = "<img src='images/sd-logo-inverse-cross.svg' alt='close navigation menu'>";
 
                 //turn on the nav list element
                 this.nextElementSibling.style.display = "block";
