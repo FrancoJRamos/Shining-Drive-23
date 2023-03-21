@@ -16,6 +16,7 @@ let overlay = document.getElementById("nav_overlay")
 
 let navButtons = document.getElementsByClassName("nav_button");
 
+
 //set all panels to a closed behavior on load if on tablet or mobile
 
 if(window.innerWidth<1279){
@@ -45,6 +46,10 @@ if(window.innerWidth<1279){
 
                 //turn on the nav list element
                 this.nextElementSibling.style.display = "block";
+
+                //exception for design & motion page - reduce z-index when overlay is brought up
+                overlayButton[0].style.zIndex="3";
+                imageDisplay.style.zIndex="3";
             }
             //or else the nav list is already visible
             else{
@@ -56,8 +61,21 @@ if(window.innerWidth<1279){
 
                 //turn off the nav list element
                 this.nextElementSibling.style.display = "none";
+                
+                //exception for design & motion page - increase z-index when overlay is brought up
+                overlayButton[0].style.zIndex="9";
+                imageDisplay.style.zIndex="8";
             }
         })
     }
 }
 
+if(window.innerWidth >=1280){
+    window.addEventListener("load", function(){
+        navButtons[0].style.display = "none";
+    })
+}
+
+
+//rename the anonymous functions to be called 
+//use a resize eventlistener to call the anonymous funcitons and determine the correct nav layout

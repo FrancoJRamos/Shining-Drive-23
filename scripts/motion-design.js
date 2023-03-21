@@ -157,6 +157,10 @@ for(let i=0; i<overlayButton.length;i++){
         //check if the overlay is hidden or not and execute script
             //default behavior: if it is hidden
         if (overlayDiv.style.display =="none"){
+            //set navButton z-index lower than project overlay
+            navButtons[0].style.zIndex="3";
+            //set imageDisplay zIndex to 8
+            imageDisplay.style.zIndex="8";
                 //console.log("overdiv off is entered");
             //turn on the overlay div
             overlayDiv.style.display="block";
@@ -164,26 +168,65 @@ for(let i=0; i<overlayButton.length;i++){
                 //console.log(overlayButton[0].innerHTML);
             overlayButton[0].innerHTML ="<img src='images/sd-logo-inverse-cross.svg' alt='click for a smaller view of file'>";
             //change the img row & column style to take up the entire grid
+            
                 //grid changes based on device view
             //mobile view
             if(innerWidth<=750){
-
+                imageDisplay.style.gridRow="1/span 3";
+                imageDisplay.style.gridColumn="1/span 3";
+                imageDisplay.style.height="13em";
+                imageDisplay.style.width="22em";
+                //move the interactive button out of the way
+                
             }
             //tablet view
-            else if(innerWidth>750 && innerWidth<=1280){
-
+            else if(innerWidth>750 && innerWidth<1280){
+                imageDisplay.style.gridRow="1/span 3";
+                imageDisplay.style.gridColumn="1/span 4";
+                imageDisplay.style.height="23em";
+                imageDisplay.style.width="40em";
             }
             //desktop view
-            else if(innerWidth>1280){
-                
+            else if(innerWidth>=1280){
+                imageDisplay.style.gridRow="2/span 3";
+                imageDisplay.style.gridColumn="1/span 6";
+                imageDisplay.style.height="37em";
+                imageDisplay.style.width="66em";
             }
 
         }else if(overlayDiv.style.display =="block"){
+            //set navButton z-index higher than project overlay
+            navButtons[0].style.zIndex="8";
+            //set imageDisplay zIndex to 0
+            imageDisplay.style.zIndex="0";
                 //console.log("overdiv is on is entered");
             //turn off the overlay div
             overlayDiv.style.display="none";
             //change the button into the inverse logo
             overlayButton[0].innerHTML ="<img src='images/sd-logo-inverse.svg' alt='click for a larger view of file'>";
+            //revert the img row & column style
+                //grid changes based on device view
+            //mobile view
+            if(innerWidth<=750){
+                imageDisplay.style.gridRow="2/span 1";
+                imageDisplay.style.gridColumn="2/span 1";
+                imageDisplay.style.height="10em";
+                imageDisplay.style.width="17em";
+            }
+            //tablet view
+            else if(innerWidth>750 && innerWidth<1280){
+                imageDisplay.style.gridRow="2/span 1";
+                imageDisplay.style.gridColumn="2/span 1";
+                imageDisplay.style.height="12em";
+                imageDisplay.style.width="21em";
+            }
+            //desktop view
+            else if(innerWidth>=1280){
+                imageDisplay.style.gridRow="2/span 1";
+                imageDisplay.style.gridColumn="3/span 1";
+                imageDisplay.style.height="14em";
+                imageDisplay.style.width="25em";
+            }
         };
         
         //console.log("overlayButton has been clicked");
