@@ -153,6 +153,48 @@ let overlayDiv = document.getElementById("project_overlay");
 
 overlayDiv.style.display="none";
 
+function gridResetMobile(){
+    imageDisplay.style.gridRow="2/span 1";
+    imageDisplay.style.gridColumn="2/span 1";
+    imageDisplay.style.height="10em";
+    imageDisplay.style.width="17em";
+}
+
+function gridResetTablet(){
+    imageDisplay.style.gridRow="2/span 1";
+    imageDisplay.style.gridColumn="2/span 1";
+    imageDisplay.style.height="12em";
+    imageDisplay.style.width="21em";
+}
+
+function gridResetDesktop(){
+    imageDisplay.style.gridRow="2/span 1";
+    imageDisplay.style.gridColumn="3/span 1";
+    imageDisplay.style.height="14em";
+    imageDisplay.style.width="25em";
+}
+
+function gridOverlayMobile(){
+    imageDisplay.style.gridRow="1/span 3";
+    imageDisplay.style.gridColumn="1/span 3";
+    imageDisplay.style.height="13em";
+    imageDisplay.style.width="22em";
+}
+
+function gridOverlayTablet(){
+    imageDisplay.style.gridRow="1/span 3";
+    imageDisplay.style.gridColumn="1/span 4";
+    imageDisplay.style.height="23em";
+    imageDisplay.style.width="40em";
+}
+
+function gridOverlayDesktop(){
+    imageDisplay.style.gridRow="2/span 3";
+    imageDisplay.style.gridColumn="1/span 6";
+    imageDisplay.style.height="37em";
+    imageDisplay.style.width="66em";
+}
+
 for(let i=0; i<overlayButton.length;i++){
     overlayButton[i].addEventListener("click",function(){
         //check if the overlay is hidden or not and execute script
@@ -173,26 +215,24 @@ for(let i=0; i<overlayButton.length;i++){
                 //grid changes based on device view
             //mobile view
             if(innerWidth<=750){
-                imageDisplay.style.gridRow="1/span 3";
-                imageDisplay.style.gridColumn="1/span 3";
-                imageDisplay.style.height="13em";
-                imageDisplay.style.width="22em";
+                //increase size
+                gridOverlayMobile();
                 //move the interactive button out of the way
                 
             }
             //tablet view
             else if(innerWidth>750 && innerWidth<1280){
-                imageDisplay.style.gridRow="1/span 3";
-                imageDisplay.style.gridColumn="1/span 4";
-                imageDisplay.style.height="23em";
-                imageDisplay.style.width="40em";
+                //increase size
+                gridOverlayTablet();
+                //move interactive button out of the way
+
             }
             //desktop view
             else if(innerWidth>=1280){
-                imageDisplay.style.gridRow="2/span 3";
-                imageDisplay.style.gridColumn="1/span 6";
-                imageDisplay.style.height="37em";
-                imageDisplay.style.width="66em";
+                //increase size
+                gridOverlayDesktop();
+                //move interactive button out of the way
+
             }
 
         }else if(overlayDiv.style.display =="block"){
@@ -209,24 +249,24 @@ for(let i=0; i<overlayButton.length;i++){
                 //grid changes based on device view
             //mobile view
             if(innerWidth<=750){
-                imageDisplay.style.gridRow="2/span 1";
-                imageDisplay.style.gridColumn="2/span 1";
-                imageDisplay.style.height="10em";
-                imageDisplay.style.width="17em";
+                //decrease size
+                gridResetMobile();
+                //reset button position
+
             }
             //tablet view
             else if(innerWidth>750 && innerWidth<1280){
-                imageDisplay.style.gridRow="2/span 1";
-                imageDisplay.style.gridColumn="2/span 1";
-                imageDisplay.style.height="12em";
-                imageDisplay.style.width="21em";
+                //decrease size
+                gridResetTablet();
+                //reset button position
+
             }
             //desktop view
             else if(innerWidth>=1280){
-                imageDisplay.style.gridRow="2/span 1";
-                imageDisplay.style.gridColumn="3/span 1";
-                imageDisplay.style.height="14em";
-                imageDisplay.style.width="25em";
+                //decrease size
+                gridResetDesktop();
+                //reset button position
+
             }
         };
         
@@ -237,3 +277,16 @@ for(let i=0; i<overlayButton.length;i++){
         //change its location using the row & column
     });
 }
+
+//reset imageDisplay grid styles on a resize event
+
+window.addEventListener("resize",function(){
+    //console.log("resize event");
+    if (window.innerWidth<=750){
+        gridResetMobile();
+    }else if(innerWidth>750 && innerWidth<1280){
+        gridResetTablet();
+    }else if(innerWidth>=1280){
+        gridResetDesktop();
+    }
+})

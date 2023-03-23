@@ -11,10 +11,10 @@
 
 //Declare Variables/Grab Elements
 
-let navList = document.getElementById("drop_down_nav");
-let overlay = document.getElementById("nav_overlay")
+const navList = document.getElementById("drop_down_nav");
+const overlay = document.getElementById("nav_overlay");
 
-let navButtons = document.getElementsByClassName("nav_button");
+const navButtons = document.getElementsByClassName("nav_button");
 
 //moved from motion-design.js line 27
 let pageCheck =document.getElementsByClassName("page_check");
@@ -39,11 +39,11 @@ window.addEventListener("load",function(){
     //call navMobile
     if(window.innerWidth<1279){
         navMobile();
-        console.log("mobile view load");
+        //console.log("mobile view load");
     }
     else if(window.innerWidth >=1280){
         navDesktop();
-        console.log("desktop view load");
+        //console.log("desktop view load");
     }
 })
 //use a resize eventlistener to call the navFunctions and determine the correct nav layout
@@ -51,10 +51,10 @@ window.addEventListener("resize",function(){
     //console.log("resize event");
     if (window.innerWidth<1279){
         navMobile();
-        console.log("mobile view change");
+        //console.log("mobile view change");
     }else{
         navDesktop();
-        console.log("desktop view change");
+        //console.log("desktop view change");
     }
 })
 /*

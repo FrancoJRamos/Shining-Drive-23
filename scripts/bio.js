@@ -12,8 +12,8 @@
 
 //Initialize Variables
 //arrow buttons
-let leftArrow = document.getElementsByClassName("arrow_left");
-let rightArrow = document.getElementsByClassName("arrow_right");
+const leftArrow = document.getElementsByClassName("arrow_left");
+const rightArrow = document.getElementsByClassName("arrow_right");
 
 let imageDisplay = document.getElementById("bio_interactive");
 
