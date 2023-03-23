@@ -16,66 +16,107 @@ let overlay = document.getElementById("nav_overlay")
 
 let navButtons = document.getElementsByClassName("nav_button");
 
+//moved from motion-design.js line 27
+let pageCheck =document.getElementsByClassName("page_check");
 
-//set all panels to a closed behavior on load if on tablet or mobile
+//function to set navList to hidden and navButtons to display
+function navMobile(){
+    navList.style.display = "none";
+    navButtons[0].style.display = "block";
+    navList.style.flexDirection="column";
+    //console.log(navList.style.flexDirection);
+}
+//function to set navList to display and navButtons to hidden
+function navDesktop(){
+    navList.style.display = "flex";
+    navButtons[0].style.display = "none";
+    navList.style.flexDirection="row";
+    //console.log(navList.style.flexDirection);
 
+}
+//on load call appropriate function based on screen size
+window.addEventListener("load",function(){
+    //call navMobile
+    if(window.innerWidth<1279){
+        navMobile();
+        console.log("mobile view load");
+    }
+    else if(window.innerWidth >=1280){
+        navDesktop();
+        console.log("desktop view load");
+    }
+})
+//use a resize eventlistener to call the navFunctions and determine the correct nav layout
+window.addEventListener("resize",function(){
+    //console.log("resize event");
+    if (window.innerWidth<1279){
+        navMobile();
+        console.log("mobile view change");
+    }else{
+        navDesktop();
+        console.log("desktop view change");
+    }
+})
+/*
 if(window.innerWidth<1279){
     //console.log("window is in tablet/mobile view");
-    window.addEventListener("load", function(){
+    window.addEventListener("load", function navMobile(){
         //console.log("an anonymous function has been called on load");
         navList.style.display = "none";
     })
-    
-    //Test if a panel is displayed and toggle its state between block and hidden
-    
-    for (i=0; i<navButtons.length; i++){
-        //console.log("this is the "+i+"th iteration" );
-        
-        navButtons[i].addEventListener("click", function(){
-            //console.log(navButtons[0].innerHTML);
-            //console.log(this.nextElementSibling);
-    
-            //if the nav list is hidden
-            if(this.nextElementSibling.style.display == "none"){
-                //turn on the overlay element
-                //console.log(overlay);
-                overlay.style.display = "block";
 
-                //change button innerHTML into the exit button
-                navButtons[0].innerHTML = "<img src='images/sd-logo-inverse-cross.svg' alt='close navigation menu'>";
+} 
+*/
+//Test if a panel is displayed and toggle its state between block and hidden
+for (i=0; i<navButtons.length; i++){
+    //console.log("this is the "+i+"th iteration" );
+    
+    navButtons[i].addEventListener("click", function(){
+        //console.log(navButtons[0].innerHTML);
+        //console.log(this.nextElementSibling);
 
-                //turn on the nav list element
-                this.nextElementSibling.style.display = "block";
+        //if the nav list is hidden
+        if(this.nextElementSibling.style.display == "none"){
+            //turn on the overlay element
+            //console.log(overlay);
+            overlay.style.display = "block";
 
-                //exception for design & motion page - reduce z-index when overlay is brought up
+            //change button innerHTML into the exit button
+            navButtons[0].innerHTML = "<img src='images/sd-logo-inverse-cross.svg' alt='close navigation menu'>";
+
+            //turn on the nav list element
+            this.nextElementSibling.style.display = "block";
+
+            //exception for design & motion page - reduce z-index when overlay is brought up
+            if(pageCheck.id =="motion" || pageCheck.id == "design"){
                 overlayButton[0].style.zIndex="3";
-                imageDisplay.style.zIndex="3";
+                imageDisplay.style.zIndex="3";    
             }
-            //or else the nav list is already visible
-            else{
-                //turn off the overlay element
-                overlay.style.display = "none";
+        }
+        //or else the nav list is already visible
+        else{
+            //turn off the overlay element
+            overlay.style.display = "none";
 
-                //change button innerHTML into the exit button
-                navButtons[0].innerHTML = "<img src='images/sd-logo.svg' alt='Navigation Menu'>";
+            //change button innerHTML into the exit button
+            navButtons[0].innerHTML = "<img src='images/sd-logo.svg' alt='Navigation Menu'>";
 
-                //turn off the nav list element
-                this.nextElementSibling.style.display = "none";
-                
-                //exception for design & motion page - increase z-index when overlay is brought up
+            //turn off the nav list element
+            this.nextElementSibling.style.display = "none";
+            
+            //exception for design & motion page - increase z-index when overlay is brought up
+            if(pageCheck.id == "motion" || pageCheck.id == "design"){
                 overlayButton[0].style.zIndex="9";
-                imageDisplay.style.zIndex="8";
+                imageDisplay.style.zIndex="8";    
             }
-        })
-    }
-}
-
-if(window.innerWidth >=1280){
-    window.addEventListener("load", function(){
-        navButtons[0].style.display = "none";
+        }
     })
 }
 
-
-//rename the anonymous functions to be called 
-//use a resize eventlistener to call the anonymous funcitons and determine the correct nav layout
+/*
+if(window.innerWidth >=1280){
+    window.addEventListener("load", function navDesktop(){
+        navButtons[0].style.display = "none";
+    })
+}
+*/

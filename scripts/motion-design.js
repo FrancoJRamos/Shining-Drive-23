@@ -24,8 +24,9 @@ let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Proj
 window.addEventListener("load",updateSection);
 
 //check if the page is on design or motion page
-let pageCheck =document.getElementsByClassName("page_check");
+//moved to nav.js line 20
 //console.log(pageCheck[0]);
+
 let page="";
 let fileFormat="";
 

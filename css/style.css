@@ -1090,6 +1090,7 @@ footer
         }
     nav ul
         {
+            display:block;
             flex-direction:row;/*flex direction for the button array, seperate from the nav array*/
         }
     nav li
