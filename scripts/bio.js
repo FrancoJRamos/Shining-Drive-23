@@ -21,7 +21,7 @@ let textDisplay = document.getElementById("bio_story");
 
 let storyCount = 1;
 let storyUpdate = 0;
-let storyAlt = ["Prologue","Engineering", "Carpentry", "Uh-Oh", "Recovery", "Pressure"]
+let storyAlt = ["The beginning pt1: The Pressure","The beginning pt2: The Doubt", "The Middle pt 1: The Time", "The Middle pt 2: The Accident", "The End pt1: The Recovery", "The End pt2: The Pressure"]
 //story arrays - needed to store text in the stories, store in a seperate script page to save space/readability
 let storyButtons = document.querySelectorAll("input[name=story_select]");
 
@@ -96,4 +96,6 @@ for (let i=0; i<storyButtons.length; i++){
 function textUpdate(){
     //replace the story title within the h3 element in textDisplay with its corresponding value in the storyAlt Array
     textDisplay.childNodes[1].innerHTML=storyAlt[storyCount-1];
+    //console.log(textDisplay.childNodes[3].innerHTML);
+    textDisplay.childNodes[3].innerHTML=storyArray[storyCount-1];
 }

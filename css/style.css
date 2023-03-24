@@ -302,7 +302,7 @@ nav ul
     {
         font-family: 'Alegreya', serif;
     }
-/* Mobile & Design Rules*/
+/* Motion & Design Rules*/
 #motion_interactive, #design_interactive
     {
         z-index: 0;
@@ -386,7 +386,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 8em 6fr 7fr;
+            grid-template-rows: 8em 24em 1fr 2fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -406,7 +406,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 8em 24em 2fr 32em 1fr;
+            grid-template-rows: 8em 24em 17em 5fr 8em;
             margin:auto;
             width:90%;
             height:min-content;
@@ -489,7 +489,7 @@ footer
             grid-column: 1/ span 1;
             width:100%;
             overflow-x:hidden;
-            
+            justify-content: center;
         }
     #quick_links h2
         {
@@ -501,6 +501,7 @@ footer
             display:flex;
             flex-direction:row;
             align-items:center;
+            justify-content: center;
             overflow-x:scroll;
             margin:0 0 15px;
         }
@@ -511,6 +512,12 @@ footer
     .quick_links_item
         {
             margin: 0 10px;
+        }
+    #readme
+        {
+            grid-row: 4/span 1;
+            grid-column: 1/span 1;
+            padding:0 10px 0 10px;
         }
     /* contact page mobile rules */
     #contact_grid h1
@@ -753,7 +760,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr ;
-            grid-template-rows: 10em 3fr 3fr;
+            grid-template-rows: 10em 2fr 11em 2fr;
             margin:auto;
             width:80%;
             height:min-content;
@@ -773,7 +780,7 @@ footer
         {
             display:grid;
             grid-template-columns: 3em 3fr 3fr 3em;
-            grid-template-rows: 10em 3fr 26em 1fr;
+            grid-template-rows: 10em 30em 5fr 10em;
             margin:auto;
             width:80%;
             height:min-content;
@@ -868,6 +875,11 @@ footer
         {
             margin: 5% 0 5%;
         }
+    #readme
+        {
+            grid-row:4/span 1;
+            grid-column:1/span 1;
+        }
     /* Contact Page Tablet Rules*/
     #contact_grid .page_banner
         {
@@ -923,15 +935,16 @@ footer
     #bio_grid .arrow_left
         {
             grid-column: 1/span 1;
-            grid-row: 2/span 2;
+            grid-row: 3/span 1;
             justify-self:center;
-            align-self:center;
+            align-self:start;
         }
     #bio_grid .arrow_right
         {
             grid-column: 4/span 1;
-            grid-row: 2/span 2;
-            place-self:center;
+            grid-row: 3/span 1;
+            justify-self:center;
+            align-self:start;
         }
     #bio_interactive
         {
@@ -1114,8 +1127,8 @@ footer
     #home_grid
         {
             display:grid;
-            grid-template-columns: 2fr 3fr 3fr 2fr;
-            grid-template-rows: 8em 3fr 3fr;
+            grid-template-columns: 2fr 3fr 3fr 2fr ;
+            grid-template-rows: 8em 3fr 11em 3fr ;
             margin:auto;
             width:80%;
             height:min-content;
@@ -1135,7 +1148,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 1fr 3fr 3fr 1fr 1fr;
-            grid-template-rows: 8em 28em 28em 1fr ;
+            grid-template-rows: 8em 30em 5fr 10em ;
             margin:auto;
             width:80%;
             height:min-content;
@@ -1215,6 +1228,12 @@ footer
         {
             margin: 5% 0 5%;
         }
+    #readme
+        {
+            grid-column:1/span 4;
+            grid-row:4/span 1;
+            text-align: center;
+        }
     /* Contact Page Desktop Rules*/
     #contact_grid .page_banner
         {
@@ -1274,16 +1293,16 @@ footer
     #bio_grid .arrow_left
         {
             grid-column: 2/span 1;
-            grid-row:2/span 2;
-            align-self:center;
+            grid-row:3/span 1;
             justify-self:center;
+            align-self:start;
         }
     #bio_grid .arrow_right
         {
             grid-column:5/span 1;
-            grid-row:2/span 2;
-            align-self:center;
-            justify-self: center;
+            grid-row:3/span 1;
+            justify-self:center;
+            align-self:start;
         }
     #bio_interactive
         {
