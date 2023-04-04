@@ -15,5 +15,6 @@ let storyArray = [
     "[Placeholder]",
     "[Placeholder]",
     "[Placeholder]",
-    "[Placeholder]",
+    "[Placeholder]"
 ]
+

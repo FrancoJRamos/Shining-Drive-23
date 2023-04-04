@@ -20,7 +20,8 @@ let sectionCount=1;
 let sectionButtons = document.getElementsByClassName("project_section_select");
 let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Project Section "+sectionCount+"'>"
 
-//onload call updateSection to change the sectionButton to on
+//onload call updateSection to update the sectionButton[0] to on
+//all section buttons are set to off by default
 window.addEventListener("load",updateSection);
 
 //check if the page is on design or motion page
@@ -43,18 +44,19 @@ let fileFormat="";
     //console.log(document.getElementById("design_interactive").innerHTML);
 
 
+//initialize projectDescription object
+let projectDescription=document.getElementById(page+"_description");
+    //console.log(projectDescription.childNodes[1].innerHTML);
 //initalize imageDisplay object
 let imageDisplay=document.getElementById(page+"_interactive");
-//console.log(imageDisplay.innerHTML);
-//project arrays
-    //store classes array
-
-    //store alt array
-
+    //console.log(imageDisplay.innerHTML);
 
 //declare function to update the project image/description
 function Updateproject(){
 
+    //change project title
+    UpdateTitle();
+    //change project image
     let html="<img ";
     //update classes
     //update src
@@ -290,3 +292,16 @@ window.addEventListener("resize",function(){
         gridResetDesktop();
     }
 })
+
+//function to update the project title
+function UpdateTitle(){
+    //console.log(projectCount);
+
+    //if statement to change between design and motion arrays
+    if (page == "design"){
+        projectDescription.childNodes[1].innerHTML = designTitles[projectCount-1];
+    }else if(page == "motion"){
+        projectDescription.childNodes[1].innerHTML = motionTitles[projectCount-1];
+    }
+    //console.log(projectDescription.childNodes[1].innerHTML);
+}
