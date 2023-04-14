@@ -386,7 +386,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 8em 24em 1fr 2fr;
+            grid-template-rows: 8em 24em 1fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -760,7 +760,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr ;
-            grid-template-rows: 10em 2fr 11em 2fr;
+            grid-template-rows: 10em 2fr 11em;
             margin:auto;
             width:80%;
             height:min-content;
@@ -1128,7 +1128,7 @@ footer
         {
             display:grid;
             grid-template-columns: 2fr 3fr 3fr 2fr ;
-            grid-template-rows: 8em 3fr 11em 3fr ;
+            grid-template-rows: 8em 3fr 11em ;
             margin:auto;
             width:80%;
             height:min-content;
