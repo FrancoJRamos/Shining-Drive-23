@@ -297,6 +297,41 @@ nav ul
         height:auto;
         border: 3px solid #FAC739;
     }
+.accordion_panel fieldset
+    {
+        margin-bottom:1em;
+        display:flex;
+        flex-direction:column;
+        align-items: center;
+    }
+.accordion_panel legend
+    {
+        margin-bottom:5px;
+        
+    }
+#email_information div
+    {
+        text-align:center;
+        max-width: fit-content;
+        text-align: right;
+    }
+#email_topic div
+    {
+        text-align:center;
+        max-width: fit-content;
+        text-align: left;
+    }
+.contact_submit input
+    {
+        padding: 12px 20px;
+        color:#FAC739;
+        background-color: #294294;
+        border: 3px solid #FAC739;
+        font-family: 'Noto Sans Display', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        margin-right: 5px;
+    }
 /* Bio Page Rules*/
 #bio_description, #bio_story, #bio_mission_statement
     {
