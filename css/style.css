@@ -441,7 +441,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 3fr 1fr;
-            grid-template-rows: 8em 15em 28em 17em 5fr 8em;
+            grid-template-rows: 8em 15em 37em 17em 5fr 8em;
             margin:auto;
             width:90%;
             height:min-content;
