@@ -8,6 +8,7 @@ nav,.page_banner, #profile, #quick_links, #contact_resume, #contact_email, #cont
     }
 */
 /*Debuging div sizes cheat sheet*/
+
 /*
 .test_div
     {
@@ -341,6 +342,39 @@ nav ul
 #motion_interactive, #design_interactive
     {
         z-index: 0;
+    }
+#motion_description table, #design_description table
+    {
+        border: 1px, solid;
+        width:80%;
+        margin:auto;
+        table-layout: fixed;
+    }
+.project_table_header
+    {
+        border: 2px solid;
+        color: #FAC739;
+        text-align: center;
+        width: 33%;
+        font-family: 'Noto Sans Display', sans-serif;
+        font-weight: 600;
+        font-size: 20px;
+        padding: 3px 0;
+    }
+.project_table_data
+    {
+        text-align: center;
+        font-family: 'Noto Sans Display', sans-serif;
+        font-weight: 500;
+        font-size: 15px;
+        padding: 10px 0;
+        height: 30px;
+        overflow: visible;
+        white-space: nowrap
+    }
+#project_table_motion_notes, #project_table_design_notes
+    {
+        white-space: normal;
     }
 /* Footer Rules */
 footer
@@ -726,6 +760,7 @@ footer
         {
             grid-column: 1/span 3;
             grid-row:4/span 1;
+            margin-top: 33px;
         }
     #motion_grid .resource_list,#design_grid .resource_list
         {
@@ -820,7 +855,7 @@ footer
         {
             display:grid;
             grid-template-columns: 3em 3fr 3fr 3em;
-            grid-template-rows: 10em 11em 36em 5fr 10em;
+            grid-template-rows: 10em 11em 7fr 6fr 10em;
             margin:auto;
             width:80%;
             height:min-content;
@@ -830,9 +865,9 @@ footer
         {
             display:grid;
             grid-template-columns: 3em 21em 3em 3fr;
-            grid-template-rows: 10em 12em 3em 5em 2fr;
+            grid-template-rows: 10em 12em 3em 6em 2fr;
             margin:auto;
-            width:80%;
+            width:90%;
             height:min-content;
             margin-bottom: 30px;
         }
@@ -1014,7 +1049,8 @@ footer
         {
             grid-column: 2/span 2;
             grid-row:4/span 1;
-            align-self: center;
+            align-self: start;
+            
         }
     #bio_story_select
         {
@@ -1082,8 +1118,25 @@ footer
     #motion_description, #design_description
         {
             grid-column:4/span 1;
-            grid-row:2/span 2;
+            grid-row:2/span 3;
             padding: 0 0.5em 0 0.5em;
+        }
+    #motion_description h2, #design_description h2
+        {
+            white-space: nowrap;
+            overflow:visible;
+        }
+    #motion_description table, #design_description table
+        {
+            width:100%;
+        }
+    .project_table_header
+        {
+            font-size: 15px;
+        }
+    .project_table_data
+        {
+            height:20px;
         }
     #motion_grid .resource_list, #design_grid .resource_list
         {
@@ -1449,9 +1502,26 @@ footer
     #motion_description, #design_description
         {
             grid-column: 5/span 1;
-            grid-row:2/span 2;
+            grid-row:2/span 3;
             justify-self:center;
             text-align: center;
+        }
+    #motion_description h2, #design_description h2
+        {
+            white-space: nowrap;
+            overflow:visible;
+        }
+    #motion_description table, #design_description table
+        {
+            width:100%;
+        }
+    .project_table_header
+        {
+            font-size: 15px;
+        }
+    .project_table_data
+        {
+            height:20px;
         }
     #motion_description h2, #design_description h2
         {
