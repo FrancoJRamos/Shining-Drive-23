@@ -28,7 +28,7 @@ let motionTitles = [
     "Lip Sync Study",
     "Night Hawk",
     "FX Animation Study",
-    "Cycles Animation Study",
+    "Printmaking Animation",
     "Creatures Study",
     "Allegro con Fuoco"
 ]

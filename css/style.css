@@ -367,10 +367,10 @@ nav ul
         font-family: 'Noto Sans Display', sans-serif;
         font-weight: 500;
         font-size: 15px;
-        padding: 10px 0;
+        padding: 10px 10px;
         height: 30px;
         overflow: visible;
-        white-space: nowrap
+        white-space: wrap;
     }
 #project_table_motion_notes, #project_table_design_notes
     {
@@ -1137,6 +1137,7 @@ footer
     .project_table_data
         {
             height:20px;
+            white-space: wrap;
         }
     #motion_grid .resource_list, #design_grid .resource_list
         {
@@ -1518,10 +1519,12 @@ footer
     .project_table_header
         {
             font-size: 15px;
+            width: 20%;
         }
     .project_table_data
         {
             height:20px;
+            white-space: wrap;
         }
     #motion_description h2, #design_description h2
         {
