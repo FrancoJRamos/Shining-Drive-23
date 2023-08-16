@@ -110,5 +110,5 @@ let motionBriefs = [
     "Tasked with practicing special effects, this assignment was a reminder that more practice is needed.",
     "Wanting to combine image sequences with printmaking, this project was an experiment in developing work in a 3D environment while retaining a 2D look",
     "Continuing to practice capturing life-like movement, this project is a compilation of real-life studies.",
-    "As a followup to Night Hawk, this project was a continued introduction to animation. Focusing on having enough extreme poses to make an animated short."
+    "As a follow up to Night Hawk, this project was a continued introduction to animation. Focusing on having enough extreme poses to make an animated short."
 ]

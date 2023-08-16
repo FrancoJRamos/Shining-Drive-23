@@ -18,6 +18,7 @@ let projectCount=1;
 let sectionCount=1;
 
 let sectionButtons = document.getElementsByClassName("project_section_select");
+let sectionButtonsGroup = document.getElementsByClassName("project_section");
 let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Project Section "+sectionCount+"'>"
 
 //onload call updateSection to update the sectionButton[0] to on
@@ -85,6 +86,8 @@ function Updateproject(){
     //left=decrease sectionCount
 let leftArrow = document.getElementsByClassName("arrow_left");
 let rightArrow = document.getElementsByClassName("arrow_right");
+
+
 
 rightArrow[0].addEventListener("click", function(){
     //console.log("right arrow has been clicked");
@@ -170,6 +173,16 @@ function gridResetMobile(){
     imageDisplay.style.gridColumn="2/span 1";
     imageDisplay.style.height="10em";
     imageDisplay.style.width="17em";
+
+    overlayButton[0].style.gridColumn="2/span 1";
+    overlayButton[0].style.gridRow="2/span 1";
+
+    sectionButtonsGroup[0].style.gridRow="3/span 1";
+    sectionButtonsGroup[0].style.gridColumn="2/span 1";
+    sectionButtonsGroup[0].style.justifySelf="center";
+    sectionButtonsGroup[0].style.background = "";
+    sectionButtonsGroup[0].style.border = "";
+    sectionButtonsGroup[0].style.height="";
 }
 
 function gridResetTablet(){
@@ -177,6 +190,14 @@ function gridResetTablet(){
     imageDisplay.style.gridColumn="2/span 1";
     imageDisplay.style.height="12em";
     imageDisplay.style.width="21em";
+
+    overlayButton[0].style.gridColumn="2/span 1"
+
+    sectionButtonsGroup[0].style.gridRow="3/span 1";
+    sectionButtonsGroup[0].style.gridColumn="2/span 1";
+    sectionButtonsGroup[0].style.alignSelf="center";
+    sectionButtonsGroup[0].style.background = "";
+    sectionButtonsGroup[0].style.border = "";
 }
 
 function gridResetDesktop(){
@@ -184,20 +205,48 @@ function gridResetDesktop(){
     imageDisplay.style.gridColumn="3/span 1";
     imageDisplay.style.height="14em";
     imageDisplay.style.width="25em";
+
+    overlayButton[0].style.gridColumn="3/span 1"
+
+    sectionButtonsGroup[0].style.gridRow="3/span 1";
+    sectionButtonsGroup[0].style.gridColumn="3/span 1";
+    sectionButtonsGroup[0].style.alignSelf="center";
+    sectionButtonsGroup[0].style.background = "";
+    sectionButtonsGroup[0].style.border = "";
 }
 
 function gridOverlayMobile(){
-    imageDisplay.style.gridRow="1/span 3";
+    imageDisplay.style.gridRow="2/span 2";
     imageDisplay.style.gridColumn="1/span 3";
     imageDisplay.style.height="13em";
     imageDisplay.style.width="22em";
+
+    overlayButton[0].style.gridColumn="3/span 1";
+    overlayButton[0].style.gridRow="4/span 1";
+
+    sectionButtonsGroup[0].style.gridColumn="1/span 3";
+    sectionButtonsGroup[0].style.gridRow="4/span 1";
+    sectionButtonsGroup[0].style.justifySelf="start";
+    sectionButtonsGroup[0].style.background = "#294294";
+    sectionButtonsGroup[0].style.border = "3px solid #fac739";
+    sectionButtonsGroup[0].style.height="3em";
+
 }
 
 function gridOverlayTablet(){
-    imageDisplay.style.gridRow="1/span 3";
+    imageDisplay.style.gridRow="2/span 3";
     imageDisplay.style.gridColumn="1/span 4";
     imageDisplay.style.height="23em";
     imageDisplay.style.width="40em";
+
+    overlayButton[0].style.gridColumn="4/span 1";
+
+    sectionButtonsGroup[0].style.gridRow="5/span 1";
+    sectionButtonsGroup[0].style.gridColumn="1/span 4";
+    sectionButtonsGroup[0].style.alignSelf="start";
+    sectionButtonsGroup[0].style.background = "#294294";
+    sectionButtonsGroup[0].style.border = "3px solid #fac739";
+
 }
 
 function gridOverlayDesktop(){
@@ -205,6 +254,16 @@ function gridOverlayDesktop(){
     imageDisplay.style.gridColumn="1/span 6";
     imageDisplay.style.height="37em";
     imageDisplay.style.width="66em";
+
+    overlayButton[0].style.gridColumn="6/span 1"
+    overlayButton[0].style.justifySelf="start";
+
+    sectionButtonsGroup[0].style.gridRow="6/span 1";
+    sectionButtonsGroup[0].style.gridColumn="1/span 6";
+    sectionButtonsGroup[0].style.alignSelf="end";
+    sectionButtonsGroup[0].style.background = "#294294";
+    sectionButtonsGroup[0].style.border = "3px solid #fac739";
+    
 }
 
 for(let i=0; i<overlayButton.length;i++){
@@ -336,12 +395,13 @@ function UpdateDescription(){
         tableBrief.innerHTML = motionBriefs[projectCount-1];
     }
 
-    console.log("current table data is: ");
-    console.log(tableYear.innerHTML);
-    console.log(tableTools.innerHTML);
-    console.log(tableTags.innerHTML);
-    console.log(tableBrief.innerHTML);
-    
+    /*
+        console.log("current table data is: ");
+        console.log(tableYear.innerHTML);
+        console.log(tableTools.innerHTML);
+        console.log(tableTags.innerHTML);
+        console.log(tableBrief.innerHTML);
+    */
 }
 
 //function to filter project selection by clicking on a tag button
