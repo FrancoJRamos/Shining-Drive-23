@@ -51,11 +51,20 @@ let projectDescription=document.getElementById(page+"_description");
 let imageDisplay=document.getElementById(page+"_interactive");
     //console.log(imageDisplay.innerHTML);
 
+//initialize variables for table data to be edited later
+    //switch between motion and design by concatenating strings
+let tableYear = document.getElementById("project_table_"+page+"_year");
+let tableTools = document.getElementById("project_table_"+page+"_tools");
+let tableTags = document.getElementById("project_table_"+page+"_tags");
+let tableBrief = document.getElementById("project_table_"+page+"_brief");
+
 //declare function to update the project image/description
 function Updateproject(){
 
     //change project title
     UpdateTitle();
+    //change project description
+    UpdateDescription();
     //change project image
     let html="<img ";
     //update classes
@@ -141,6 +150,7 @@ for (let j=0; j<sectionButtons.length; j++){
     })
 }
 
+//By updating the section you should update the image and the icon of the project
 function updateSection(){
     //console.log("updateSection called");
     initializeSectionButtons();
@@ -220,6 +230,7 @@ for(let i=0; i<overlayButton.length;i++){
                 //increase size
                 gridOverlayMobile();
                 //move the interactive button out of the way
+                //move section buttons into view
                 
             }
             //tablet view
@@ -227,6 +238,7 @@ for(let i=0; i<overlayButton.length;i++){
                 //increase size
                 gridOverlayTablet();
                 //move interactive button out of the way
+                //move section buttons into view
 
             }
             //desktop view
@@ -234,6 +246,7 @@ for(let i=0; i<overlayButton.length;i++){
                 //increase size
                 gridOverlayDesktop();
                 //move interactive button out of the way
+                //move section buttons into view
 
             }
 
@@ -305,3 +318,32 @@ function UpdateTitle(){
     }
     //console.log(projectDescription.childNodes[1].innerHTML);
 }
+
+//function to update project descriptions
+function UpdateDescription(){
+    console.log(projectCount);
+
+    //if state to change between design and motion arrays
+    if(page == "design"){
+        tableYear.innerHTML = designYears[projectCount-1];
+        tableTools.innerHTML = designTools[projectCount-1];
+        tableTags.innerHTML = designTags[projectCount-1];
+        tableBrief.innerHTML = designBriefs[projectCount-1];
+    }else if(page == "motion"){
+        tableYear.innerHTML = motionYears[projectCount-1];
+        tableTools.innerHTML = motionTools[projectCount-1];
+        tableTags.innerHTML = motionTags[projectCount-1];
+        tableBrief.innerHTML = motionBriefs[projectCount-1];
+    }
+
+    console.log("current table data is: ");
+    console.log(tableYear.innerHTML);
+    console.log(tableTools.innerHTML);
+    console.log(tableTags.innerHTML);
+    console.log(tableBrief.innerHTML);
+    
+}
+
+//function to filter project selection by clicking on a tag button
+    //to use the includes() method along with a for loop
+    //if tableTags[i].includes(tagsbutton.innerHTML) is true then set project to visible
