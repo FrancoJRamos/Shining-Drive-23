@@ -165,32 +165,26 @@ p
         margin:0 10px;
         padding-top: 5px;
     }
-.tag_select
-    {
-        margin:0 0 1em;
-    }
-.resource_list ul, .tag_select ul, .project_select ul
+.tag_select form
     {
         display:flex;
-        text-decoration: none;
         flex-wrap:wrap;
-        justify-content: center;
+        justify-content: space-evenly;
     }
-.resource_list li, .tag_select li, .project_select li
+.tag_button
     {
-        margin: 10px;
-    }
-.resource_list button
-    {
-        color:#C7C7C7;
-        border: 3px solid #C7C7C7;
+        color:#FAC739;
+        border: 3px solid #FAC739;
         background-color:#294294;
         padding:5px 0 5px 0;
-        width: 80px;
+        margin: 5px 5px;
+        width: 120px;
         text-align:center;
         font-family: 'Noto Sans Display', sans-serif;
         font-weight: 500;
+        
     }
+
 .tag_select button
     {
         color:#FAC739;
@@ -347,7 +341,6 @@ nav ul
     }
 #motion_description table, #design_description table
     {
-        border: 1px, solid;
         width:80%;
         margin:auto;
         table-layout: fixed;
@@ -372,11 +365,10 @@ nav ul
         padding: 10px 10px;
         height: 30px;
         overflow: visible;
-        white-space: wrap;
     }
-#project_table_motion_notes, #project_table_design_notes
+#project_table_motion_brief, #project_table_design_brief
     {
-        white-space: normal;
+        padding-top: 30px;
     }
 /* Footer Rules */
 footer
@@ -385,17 +377,19 @@ footer
     }
 /* Hover Rules*/
 /* Index/Nav Hover Rules*/
-.button_link, .button_link_sub
+.button_link, .button_link_sub, .tag_button
     {
         transition:background-color, color, box-shadow;
         transition-duration: 0.5s;
     }
-.button_link:hover, .button_link_sub:hover
+.button_link:hover, .button_link_sub:hover, .tag_button:hover
     {
         background-color:#fac739;
         color:#294294;
         box-shadow: 0 0 10px 2px #fac739;
+        cursor:pointer;
     }
+
 /* Contact Hover Rules*/
 .accordion, #bio_grid label img
     {
@@ -407,17 +401,7 @@ footer
         box-shadow: 0 0 10px 2px #fac739;
     }
 /* Motion/Design/Gallery Hover Rules*/
-.tag_select button
-    {
-        transition: color, background-color, box-shadow;
-        transition-duration: 0.5s;
-    }
-.tag_select button:hover
-    {
-        background-color: #FAC739;
-        color:#294294;
-        box-shadow: 0 0 10px 2px #fac739;
-    }
+
 .project_select img, .accordion_panel img
     {
         transition: border, box-shadow;
@@ -488,7 +472,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr 15em 1fr;
-            grid-template-rows: 8em 10em 3em 3fr 2em 3fr;
+            grid-template-rows: 8em 10em 3em 25em 2em 3fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -866,7 +850,7 @@ footer
         {
             display:grid;
             grid-template-columns: 3em 21em 3em 3fr;
-            grid-template-rows: 10em 12em 3em 8em 2fr;
+            grid-template-rows: 10em 12em 3em 12em 2fr;
             margin:auto;
             width:90%;
             height:min-content;
@@ -1138,7 +1122,6 @@ footer
     .project_table_data
         {
             height:20px;
-            white-space: wrap;
         }
     #motion_grid .resource_list, #design_grid .resource_list
         {
@@ -1526,7 +1509,6 @@ footer
     .project_table_data
         {
             height:20px;
-            white-space: wrap;
         }
     #motion_description h2, #design_description h2
         {

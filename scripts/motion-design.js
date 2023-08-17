@@ -24,6 +24,7 @@ let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Proj
 //onload call updateSection to update the sectionButton[0] to on
 //all section buttons are set to off by default
 window.addEventListener("load",updateSection);
+window.addEventListener("load", tagInitialize);
 
 //check if the page is on design or motion page
 //moved to nav.js line 20
@@ -207,6 +208,7 @@ function gridResetDesktop(){
     imageDisplay.style.width="25em";
 
     overlayButton[0].style.gridColumn="3/span 1"
+    overlayButton[0].style.justifySelf="end";
 
     sectionButtonsGroup[0].style.gridRow="3/span 1";
     sectionButtonsGroup[0].style.gridColumn="3/span 1";
@@ -214,6 +216,8 @@ function gridResetDesktop(){
     sectionButtonsGroup[0].style.background = "";
     sectionButtonsGroup[0].style.border = "";
 }
+
+//Additional exceptions for z-index values on overlayButton, imageDisplay, and sectionButtonsGroup found in nav.js starting @ line 90
 
 function gridOverlayMobile(){
     imageDisplay.style.gridRow="2/span 2";
@@ -407,3 +411,40 @@ function UpdateDescription(){
 //function to filter project selection by clicking on a tag button
     //to use the includes() method along with a for loop
     //if tableTags[i].includes(tagsbutton.innerHTML) is true then set project to visible
+let tagButtons=document.getElementsByClassName("tag_button");
+
+//first initalize tags so that only those that show up in the project appear visible on the page
+function tagInitialize(){
+    for (let j=0; j<tagButtons.length; j++){
+
+        tagButtons[j].style.display="none";
+
+        //if between design & motion to use correct arrays
+        if(pageCheck[0].id=="design"){
+
+            /*
+            console.log(tagButtons[j].value);
+            console.log(designTags[j]);
+            */
+
+            for(let k=0; k<designTags.length; k++){
+                if(designTags[k].includes(tagButtons[j].value)){
+                    console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+designTags[k]);
+                    tagButtons[j].style.display="block";
+                }
+            }
+            
+        }else if(pageCheck[0].id=="motion"){
+
+            for(let k=0; k<motionTags.length; k++){
+                if(motionTags[k].includes(tagButtons[j].value)){
+                    console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
+                    tagButtons[j].style.display="block";
+                }
+            }
+        }
+
+
+    }
+
+}

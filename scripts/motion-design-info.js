@@ -74,7 +74,7 @@ let motionTools = [
 ]
 
 let designTags = [
-    "Study, Faces, Hands",
+    "Study, Character, Sketch",
     "Graphic Design, Figure, Sketch",
     "Graphic Design, Figure, Sketch",
     "Study, Figure, Form",

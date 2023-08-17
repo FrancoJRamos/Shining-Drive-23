@@ -77,6 +77,14 @@ for (i=0; i<navButtons.length; i++){
 
         //if the nav list is hidden
         if(this.nextElementSibling.style.display == "none"){
+            
+                /*only works on design motion page for debug purposes            
+                console.log(overlayButton[0].style);
+                console.log(imageDisplay.style);
+                console.log(sectionButtonsGroup[0].style);
+                */
+               console.log(pageCheck[0].id);
+            
             //turn on the overlay element
             //console.log(overlay);
             overlay.style.display = "block";
@@ -88,9 +96,17 @@ for (i=0; i<navButtons.length; i++){
             this.nextElementSibling.style.display = "block";
 
             //exception for design & motion page - reduce z-index when overlay is brought up
-            if(pageCheck.id =="motion" || pageCheck.id == "design"){
+            if(pageCheck[0].id =="motion" || pageCheck[0].id == "design"){
+                
+                console.log("the "+page+" page has the nav menu opened");
+
+                console.log(overlayButton[0].style.zIndex);
+                console.log(imageDisplay.style.zIndex);
+                console.log(sectionButtonsGroup[0].style.zIndex);
+
                 overlayButton[0].style.zIndex="3";
-                imageDisplay.style.zIndex="3";    
+                imageDisplay.style.zIndex="3";
+                sectionButtonsGroup[0].style.zIndex="3";    
             }
         }
         //or else the nav list is already visible
@@ -107,7 +123,8 @@ for (i=0; i<navButtons.length; i++){
             //exception for design & motion page - increase z-index when overlay is brought up
             if(pageCheck.id == "motion" || pageCheck.id == "design"){
                 overlayButton[0].style.zIndex="9";
-                imageDisplay.style.zIndex="8";    
+                imageDisplay.style.zIndex="8"; 
+                sectionButtonsGroup[0].style.zIndex="9";     
             }
         }
     })
