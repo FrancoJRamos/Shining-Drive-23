@@ -118,14 +118,15 @@ leftArrow[0].addEventListener("click", function(){
 
 //update projectCount by which radio button is clicked
     //store radio button array
-let projectButtons = document.querySelectorAll("input[name=project_select_form]");
+let projectForm = document.querySelectorAll("input[name=project_select_form]");
+let projectButtons = document.querySelectorAll("label");
 
-for (let i=0; i<projectButtons.length; i++){
+for (let i=0; i<projectForm.length; i++){
     //if a checkbox is checked, assign its value to projectCount and update the page
-    projectButtons[i].addEventListener("change",function(){
+    projectForm[i].addEventListener("change",function(){
         //console.log("radio button has been changed");
-        if(projectButtons[i].checked){
-            projectCount = Number(projectButtons[i].value);
+        if(projectForm[i].checked){
+            projectCount = Number(projectForm[i].value);
             //initialize sectionCount back to 1
             sectionCount = 1;
             updateSection();
@@ -384,7 +385,7 @@ function UpdateTitle(){
 
 //function to update project descriptions
 function UpdateDescription(){
-    console.log(projectCount);
+    //console.log(projectCount);
 
     //if state to change between design and motion arrays
     if(page == "design"){
@@ -429,7 +430,7 @@ function tagInitialize(){
 
             for(let k=0; k<designTags.length; k++){
                 if(designTags[k].includes(tagButtons[j].value)){
-                    console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+designTags[k]);
+                    //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+designTags[k]);
                     tagButtons[j].style.display="block";
                 }
             }
@@ -438,7 +439,7 @@ function tagInitialize(){
 
             for(let k=0; k<motionTags.length; k++){
                 if(motionTags[k].includes(tagButtons[j].value)){
-                    console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
+                    //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
                     tagButtons[j].style.display="block";
                 }
             }
@@ -447,4 +448,72 @@ function tagInitialize(){
 
     }
 
+}
+
+//write a function that when a tag button is clicked
+    //hides all other tag buttons
+    //hides all project buttons except those that share a tag
+let filter = "inactive";
+
+function projectInitialize(){
+    for(j=0; j<projectButtons.length;j++){
+        projectButtons[j].style.display="block";
+    }
+}
+
+function tagFilter(tagSelected){
+    //console.log("tagFilter function has been called");
+
+        //console.log("button: " + this.value + " has been clicked");
+
+        //console.log(tagButtons);
+        //console.log("element sibling display = "+this.nextElementSibling.style.display);
+
+        if(filter=="inactive"){
+            console.log("filter inactive branch entered")
+            for (let m=0; m<tagButtons.length;m++){
+                tagButtons[m].style.display="none";
+            };
+
+            tagSelected.style.display="block";
+            tagSelected.style.backgroundColor="#fac739";
+            tagSelected.style.color="#294294";
+
+            if(pageCheck[0].id=="design"){
+                console.log("design loop entered");
+                console.log(tagSelected.value);
+                for(let k=0; k<designTags.length; k++){
+                    projectButtons[k].style.display="none";
+                    if(designTags[k].includes(tagSelected.value)){
+                        console.log(projectForm[k]);
+                        projectButtons[k].style.display="block";
+                    }}}
+            else if(pageCheck[0].id=="motion"){
+                
+                console.log(tagSelected.value);
+
+                for(let k=0; k<motionTags.length; k++){
+                    projectButtons[k].style.display="none";
+                    if(motionTags[k].includes(tagSelected.value)){
+                        console.log(projectForm[k]);
+                        projectButtons[k].style.display="block"
+                    }}}
+            filter = "active";
+        }else{
+            console.log("filter active branch entered");
+            tagSelected.style.backgroundColor="#294294";
+            tagSelected.style.color="#fac739";
+            tagInitialize();
+            projectInitialize();
+            filter="inactive";
+        }
+        //console.log("element sibling display = "+tagSelected.nextElementSibling.style.display);    
+
+}
+
+for (let l=0; l<tagButtons.length; l++){
+    tagButtons[l].addEventListener("click",function(){
+        tagButtonSelect = this
+        tagFilter(tagButtonSelect);
+    });
 }
