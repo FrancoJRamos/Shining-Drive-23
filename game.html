@@ -8,6 +8,8 @@
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <script src="scripts/nav.js" defer></script>
+    <script src="scripts/motion-design-game.js" defer></script>
+    <script src="scripts/motion-design-game-info.js" defer></script>
 </head>
 <body>
     <header>
@@ -31,19 +33,84 @@
         <section id="game_grid">
             <h1 class="page_header">Games Catalog</h1>
             <div class="page_banner">
-                <img src="images/bio/bannersample.gif" alt="Games">
+                <img src="images/bio/bannersample.gif" alt="Games" draggable="false">
             </div>
 
-            <img src="images/game/wip.gif" alt="work in progress">
-            <p>Development in progress, please check in later</p>
-          
+            <div id="game_interactive">
+                <img src="images/game/game-1-1.gif" alt="work in progress">
+            </div>
+            
+            <button id="game_interactive_button" class="project_overlay_button">
+                <img src="images/sd-logo-inverse.svg" alt="click for a larger view of file">
+            </button>
+
+            <!-- 
+                23.09.12 
+                for current motion-design-game.js script,
+                arrow_left & arrow_right must be in DOM to allow for project_section div to function
+                -workaround by setting display on arrow buttons to none, to be removed when additional projects are added
+            -->
+            <button class="arrow_left"><img src="images/sd-arrow.svg" alt="Left Arrow"></button>
+            <button class="arrow_right"><img src="images/sd-arrow.svg" alt="Right Arrow"></button>
+
+            
+            <ul class="project_section">
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 1">
+                </button></li>
+
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 2">
+                </button></li>
+
+                <li><button class="project_section_select">
+                    <img src="images/sd-logo-inverse-dark.svg" alt="Project Section 3">
+                </button></li>
+            </ul>
+            
+            <div id="game_description">
+                <h2>Endless Runner Prototype</h2>
+
+                <table>
+                    <tr>
+                        <th class="project_table_header">Year</th>
+                        <td class="project_table_data" id="project_table_motion_year">[Placeholder]</td>
+                    </tr>
+                    <tr>
+                        <th class="project_table_header">Tools</th>
+                        <td class="project_table_data" id="project_table_motion_tools">[Placeholder 1] [Placeholder 2] [Placeholder 3]</td>
+                    </tr>
+                    <!--
+                    <tr>
+                        <th class="project_table_header">Tags</th>
+                        <td class="project_table_data" id="project_table_motion_tags">[Placeholder 1] [Placeholder 2] [Placeholder 3]</td>
+                    </tr>
+                    -->
+                    <tr>
+                        <td colspan="2" class="project_table_data" id="project_table_motion_brief"> <p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum</p></td>
+                    </tr>
+                </table>
+            </div>
+
+            <!--
+            <div class="project_select">
+                <h3>Additional Projects</h3>
+               
+                <form>
+                    <input type="radio" id="project_01" name="project_select_form" value="1">
+                        <label for="project_01">
+                            <img src="images/buttons/game-button-project01.jpg" alt="endless runner prototype">
+                        </label>
+                </form>
+            </div>
+            -->
+
         </section>
     </main>
 
     <footer>
         <p>Links to additional Work</p>
         <ul>
-            <li><a href="https://www.instagram.com/whowantssometacos/" target="_blank">Instagram</a></li>
             <li><a href="https://www.behance.net/francoramos3" target="_blank">Behance</a></li>
             <li><a href="https://www.youtube.com/channel/UC16Cc-SQcnagAdcfjKlC7bQ" target="_blank">Youtube</a></li>
             <li><a href="https://www.linkedin.com/in/francojramos/" target = "_blank">Linkedin</a></li>

@@ -121,7 +121,7 @@ for (i=0; i<navButtons.length; i++){
             this.nextElementSibling.style.display = "none";
             
             //exception for design & motion page - increase z-index when overlay is brought up
-            if(pageCheck.id == "motion" || pageCheck.id == "design"){
+            if(pageCheck.id == "motion" || pageCheck.id == "design" || pageCheck.id == "game"){
                 overlayButton[0].style.zIndex="9";
                 imageDisplay.style.zIndex="8"; 
                 sectionButtonsGroup[0].style.zIndex="9";     

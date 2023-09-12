@@ -238,7 +238,7 @@ p
     {
         object-fit: contain;
     }
-#motion_interactive_button, #design_interactive_button
+#motion_interactive_button, #design_interactive_button, #game_interactive_button
     {
         background:none;
         width: 3em; 
@@ -370,6 +370,11 @@ nav ul
     {
         padding-top: 30px;
     }
+/* Game Rules*/
+#game .arrow_left, #game .arrow_right
+    {
+        display: none;
+    }
 /* Footer Rules */
 footer
     {
@@ -412,12 +417,12 @@ footer
         border: 3px solid #FAC739;
         box-shadow: 0 0 10px 2px #fac739;
     }
-.arrow_right, .arrow_left, #motion_interactive_button,#design_interactive_button
+.arrow_right, .arrow_left, #motion_interactive_button,#design_interactive_button, #game_interactive_button
     {
         transition: box-shadow;
         transition-duration: 0.5s;
     }
-.arrow_right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover
+.arrow_right:hover,.arrow_left:hover, #motion_interactive_button:hover,#design_interactive_button:hover, #game_interactive_button:hover
     {
         box-shadow: 0 0 10px 2px #fac739;
     }
@@ -806,6 +811,7 @@ footer
     footer li   
         {
             margin: 0 0 0 1em;
+            padding: 0 1em;
         }
 }
 /* Tablet View: 751px to 1279px */
@@ -1180,10 +1186,11 @@ footer
     footer ul
         {
             display:flex;
+            
         }
     footer li   
         {
-            margin: 0 0 0 1em;
+            padding-right: 1em;
         }
 }
 /* Desktop View: 1280px to 1920px and beyond */
@@ -1606,6 +1613,6 @@ footer
         }
     footer li   
         {
-            margin: 0 0 0 1em;
+            padding-right:1em;
         }
 }
