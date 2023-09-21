@@ -33,6 +33,10 @@ let motionTitles = [
     "Allegro con Fuoco"
 ]
 
+let gameTitles = [
+    "Endless Runner Prototype"
+]
+
 let designYears = [
     "2022",
     "2022",
@@ -53,6 +57,10 @@ let motionYears = [
     "2021"
 ]
 
+let gameYears = [
+    "2023"
+]
+
 let designTools = [
     "Graphite",
     "Graphite, Photoshop, Illustrator",
@@ -71,6 +79,10 @@ let motionTools = [
     "Printmaking, Blender, Clip Studio Paint",
     "Clip Studio Paint",
     "Clip Studio Paint, Premiere Pro"
+]
+
+let gameTools = [
+    "Unity, Visual Studio Code, Clip Studio Paint"
 ]
 
 let designTags = [
@@ -111,4 +123,8 @@ let motionBriefs = [
     "Wanting to combine image sequences with printmaking, this project was an experiment in developing work in a 3D environment while retaining a 2D look",
     "Continuing to practice capturing life-like movement, this project is a compilation of real-life studies.",
     "As a follow up to Night Hawk, this project was a continued introduction to animation. Focusing on having enough extreme poses to make an animated short."
+]
+
+let gameBriefs = [
+    "Using skills developed in the Unity Essentials Pathway, this project aimed to see how far I can work through a game design document in two weeks."
 ]

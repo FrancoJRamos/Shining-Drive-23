@@ -225,6 +225,9 @@ function gridResetDesktop(){
 //Additional exceptions for z-index values on overlayButton, imageDisplay, and sectionButtonsGroup found in nav.js starting @ line 90
 
 function gridOverlayMobile(){
+    //From CSS
+        //change "page"_interactive rules
+    
     imageDisplay.style.gridRow="2/span 2";
     imageDisplay.style.gridColumn="1/span 3";
     imageDisplay.style.height="13em";
@@ -282,7 +285,7 @@ for(let i=0; i<overlayButton.length;i++){
         if (overlayDiv.style.display =="none"){
             //set navButton z-index lower than project overlay
             navButtons[0].style.zIndex="3";
-            //set imageDisplay zIndex to 8
+            //set imageDisplay zIndex to 8, which is higher than overlay z-index
             imageDisplay.style.zIndex="8";
                 //console.log("overdiv off is entered");
             //turn on the overlay div
@@ -383,6 +386,8 @@ function UpdateTitle(){
         projectDescription.childNodes[1].innerHTML = designTitles[projectCount-1];
     }else if(page == "motion"){
         projectDescription.childNodes[1].innerHTML = motionTitles[projectCount-1];
+    }else if(page == "game"){
+        projectDescription.childNodes[1].innerHTML = gameTitles[projectCount-1];
     }
     //console.log(projectDescription.childNodes[1].innerHTML);
 }
@@ -403,6 +408,16 @@ function UpdateDescription(){
         tableTags.innerHTML = motionTags[projectCount-1];
         tableBrief.innerHTML = motionBriefs[projectCount-1];
     }
+    else if(page == "game"){
+        console.log("this is "+page+"page");
+    }
+    /*
+    else if(page == "game"){
+        tableYear.innerHTML = gameYears[projectCount-1];
+        tableTools.innerHTML = gameTools[projectCount-1];
+        tableBrief.innerHTML = gameBriefs[projectCount-1];
+    }
+    */
 
     /*
         console.log("current table data is: ");
@@ -424,12 +439,13 @@ function tagInitialize(){
 
         tagButtons[j].style.display="none";
 
-        //if between design & motion to use correct arrays
+        //check based on page id to refer to corresponding tag data
         if(pageCheck[0].id=="design"){
 
             /*
-            console.log(tagButtons[j].value);
-            console.log(designTags[j]);
+            Debug messages
+                console.log(tagButtons[j].value);
+                console.log(designTags[j]);
             */
 
             for(let k=0; k<designTags.length; k++){
@@ -454,67 +470,100 @@ function tagInitialize(){
 
 }
 
-//write a function that when a tag button is clicked
-    //hides all other tag buttons
-    //hides all project buttons except those that share a tag
+//default value of filter check
 let filter = "inactive";
 
+//set all project buttons to visible
 function projectInitialize(){
     for(j=0; j<projectButtons.length;j++){
         projectButtons[j].style.display="block";
     }
 }
-
-function tagFilter(tagSelected){
-    //console.log("tagFilter function has been called");
+//write a function that when a tag button is clicked
+    //hides all other tag buttons
+    //hides all project buttons except those that share a tag
+    function tagFilter(tagSelected){
+    //Debug Messages
+        //console.log("tagFilter function has been called");
 
         //console.log("button: " + this.value + " has been clicked");
 
         //console.log(tagButtons);
         //console.log("element sibling display = "+this.nextElementSibling.style.display);
+            
+    //when a filter button is pressed: change its appearance to an active buton
+        //hide all other filter buttons
+    if(filter=="inactive"){
+        //debug message
+            //console.log("filter inactive branch entered")
+        
+        //hide all filter buttons first
+        for (let m=0; m<tagButtons.length;m++){
+            tagButtons[m].style.display="none";
+        };
 
-        if(filter=="inactive"){
-            console.log("filter inactive branch entered")
-            for (let m=0; m<tagButtons.length;m++){
-                tagButtons[m].style.display="none";
-            };
+        //set selected button to display
+        //set appearance to active
+        tagSelected.style.display="block";
+        tagSelected.style.backgroundColor="#fac739";
+        tagSelected.style.color="#294294";
 
-            tagSelected.style.display="block";
-            tagSelected.style.backgroundColor="#fac739";
-            tagSelected.style.color="#294294";
 
-            if(pageCheck[0].id=="design"){
-                console.log("design loop entered");
-                console.log(tagSelected.value);
-                for(let k=0; k<designTags.length; k++){
-                    projectButtons[k].style.display="none";
-                    if(designTags[k].includes(tagSelected.value)){
-                        console.log(projectForm[k]);
-                        projectButtons[k].style.display="block";
-                    }}}
-            else if(pageCheck[0].id=="motion"){
-                
-                console.log(tagSelected.value);
+        //base a check for filter tags based off of values in a projects tag data
+        if(pageCheck[0].id=="design")
+        {
+            //debug messages
+                //console.log("design loop entered");
+                //console.log(tagSelected.value);
 
-                for(let k=0; k<motionTags.length; k++){
-                    projectButtons[k].style.display="none";
-                    if(motionTags[k].includes(tagSelected.value)){
-                        console.log(projectForm[k]);
-                        projectButtons[k].style.display="block"
-                    }}}
-            filter = "active";
-        }else{
-            console.log("filter active branch entered");
-            tagSelected.style.backgroundColor="#294294";
-            tagSelected.style.color="#fac739";
-            tagInitialize();
-            projectInitialize();
-            filter="inactive";
+            //check filter buttons to match project tag data
+            for(let k=0; k<designTags.length; k++){
+                //if a value is found in a project that matches the filter button pressed
+                    //set that project to visible
+                if(designTags[k].includes(tagSelected.value)){
+                    //debug message
+                        //console.log(projectForm[k]);
+                    projectButtons[k].style.display="block";
+                }}
         }
+        //base a check for filter tags based off of values in a projects tag data
+        else if(pageCheck[0].id=="motion")
+        {
+            
+            //debug message
+                //console.log(tagSelected.value);
+
+            //check filter buttons to match project tag data
+            for(let k=0; k<motionTags.length; k++){
+                //if a value is found in a project that matches the filter button pressed
+                    //set that project to visible
+                    if(motionTags[k].includes(tagSelected.value)){
+                    //Debug Message
+                        //console.log(projectForm[k]);
+                    projectButtons[k].style.display="block"
+                }}
+        }
+
+        filter = "active";
+    }
+    //then pressing it again changes its appearance back to default
+        //and bring back visibility for other filter buttons
+    else{
+        //console.log("filter active branch entered");
+        tagSelected.style.backgroundColor="#294294";
+        tagSelected.style.color="#fac739";
+        tagInitialize();
+        projectInitialize();
+        filter="inactive";
+    }
+    //debug message
         //console.log("element sibling display = "+tagSelected.nextElementSibling.style.display);    
 
 }
 
+//event listener for a button that is pressed
+    //store which button instance was pressed
+    //and pass it into functions to do the filtering
 for (let l=0; l<tagButtons.length; l++){
     tagButtons[l].addEventListener("click",function(){
         tagButtonSelect = this
