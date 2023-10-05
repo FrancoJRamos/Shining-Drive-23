@@ -41,7 +41,7 @@ let fileFormat="";
         page="design";
         fileFormat="jpg";
     }
-    if(pageCheck[0].id == "game"){
+    else if(pageCheck[0].id == "game"){
         page="game";
         fileFormat="gif";
     }
@@ -409,7 +409,10 @@ function UpdateDescription(){
         tableBrief.innerHTML = motionBriefs[projectCount-1];
     }
     else if(page == "game"){
-        console.log("this is "+page+"page");
+        tableYear.innerHTML = gameYears[projectCount-1];
+        tableTools.innerHTML = gameTools[projectCount-1];
+        tableTags.innerHTML = gameTags[projectCount-1];
+        tableBrief.innerHTML = gameBriefs[projectCount-1];
     }
     /*
     else if(page == "game"){
@@ -459,6 +462,14 @@ function tagInitialize(){
 
             for(let k=0; k<motionTags.length; k++){
                 if(motionTags[k].includes(tagButtons[j].value)){
+                    //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
+                    tagButtons[j].style.display="block";
+                }
+            }
+        }else if(pageCheck[0].id=="game"){
+
+            for(let k=0; k<gameTags.length; k++){
+                if(gameTags[k].includes(tagButtons[j].value)){
                     //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
                     tagButtons[j].style.display="block";
                 }
@@ -538,6 +549,23 @@ function projectInitialize(){
                 //if a value is found in a project that matches the filter button pressed
                     //set that project to visible
                     if(motionTags[k].includes(tagSelected.value)){
+                    //Debug Message
+                        //console.log(projectForm[k]);
+                    projectButtons[k].style.display="block"
+                }}
+        }
+        //base a check for filter tags based off of values in a projects tag data
+        else if(pageCheck[0].id=="game")
+        {
+            
+            //debug message
+                //console.log(tagSelected.value);
+
+            //check filter buttons to match project tag data
+            for(let k=0; k<gameTags.length; k++){
+                //if a value is found in a project that matches the filter button pressed
+                    //set that project to visible
+                    if(gameTags[k].includes(tagSelected.value)){
                     //Debug Message
                         //console.log(projectForm[k]);
                     projectButtons[k].style.display="block"

@@ -882,7 +882,7 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-    #motion_grid, #design_grid
+    #motion_grid, #design_grid, #game_grid
         {
             display:grid;
             grid-template-columns: 3em 21em 3em 3fr;
@@ -892,7 +892,8 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-    #game_grid
+    /*
+        #game_grid
         {
             display:grid;
             grid-template-columns: 1fr;
@@ -900,6 +901,7 @@ footer
             width:80%;
             margin: auto;
         }    
+    */
     /* Header Tablet Rules */
     /* Nav Tablet Layout */
     nav
@@ -1091,17 +1093,17 @@ footer
             grid-row: 6/span 1;
         }
     /* Motion & Design Page Tablet Rules*/
-    #motion_grid .page_banner, #design_grid .page_banner
+    #motion_grid .page_banner, #design_grid .page_banner, #game_grid .page_banner
         {
             grid-column:1/span 4;
             grid-row:1/span 1;
         }
-    #motion_grid h1, #design_grid h1
+    #motion_grid h1, #design_grid h1, #game_grid h1
         {
             grid-column:1/span 4;
             grid-row:1/span 1;
         }
-    #motion_interactive, #design_interactive
+    #motion_interactive, #design_interactive, #game_interactive
         {
             grid-column:2/span 1;
             grid-row:2/span 1;
@@ -1111,49 +1113,49 @@ footer
             justify-content: center;
             /*border:1px solid red;*/
         }
-    #motion_interactive img, #design_interactive img
+    #motion_interactive img, #design_interactive img, #game_interactive img
         {
             height:100%;
             width:auto;
         }
-    #motion_interactive_button, #design_interactive_button
+    #motion_interactive_button, #design_interactive_button, #game_interactive_button
         {
             grid-column: 2/span 1;
             grid-row:2/span1;
             justify-self: end;
         }
-    #motion_grid .arrow_left, #design_grid .arrow_left
+    #motion_grid .arrow_left, #design_grid .arrow_left, #game_grid .arrow_left
         {
             grid-column:2/span 1;
             grid-row:3/span 1;
             align-self: center;
             justify-self:start;
         }
-    #motion_grid .arrow_right, #design_grid .arrow_right
+    #motion_grid .arrow_right, #design_grid .arrow_right, #game_grid .arrow_right
         {
             grid-column:2/span 1;
             grid-row:3/span 1;
             align-self: center;
             justify-self:end;
         }
-    #motion_grid .project_section, #design_grid .project_section
+    #motion_grid .project_section, #design_grid .project_section, #game_grid .project_section
         {
             grid-column:2/span 1;
             grid-row:3/span 1;
             place-self: center;
         }
-    #motion_description, #design_description
+    #motion_description, #design_description, #game_description
         {
             grid-column:4/span 1;
             grid-row:2/span 3;
             padding: 0 0.5em 0 0.5em;
         }
-    #motion_description h2, #design_description h2
+    #motion_description h2, #design_description h2, #game_descritption h2
         {
             white-space: nowrap;
             overflow:visible;
         }
-    #motion_description table, #design_description table
+    #motion_description table, #design_description table, #game_description table
         {
             width:100%;
         }
@@ -1177,23 +1179,25 @@ footer
             grid-row:5/span 1;
         }
     /* Game page Tablet rules*/
-    #game_grid .page_banner, #game_grid h1
-        {
-            grid-column:1/span 1;
-            grid-row:1/span 1;
-        }
-    #game_grid img
-        {
-            grid-column:1/span 1;
-            grid-row:2/span 1;
-            justify-self: center;
-        }
-    #game_grid p
-        {
-            grid-column:1/span 1;
-            grid-row: 3/span 1;
-            align-self:center;
-        }
+    /*
+        #game_grid .page_banner, #game_grid h1
+            {
+                grid-column:1/span 1;
+                grid-row:1/span 1;
+            }
+        #game_grid img
+            {
+                grid-column:1/span 1;
+                grid-row:2/span 1;
+                justify-self: center;
+            }
+        #game_grid p
+            {
+                grid-column:1/span 1;
+                grid-row: 3/span 1;
+                align-self:center;
+            }
+    */
     /* Footer Rules */
     footer
         {
@@ -1280,7 +1284,7 @@ footer
             height:min-content;
             margin-bottom: 1em;
         }
-    #motion_grid, #design_grid
+    #motion_grid, #design_grid, #game_grid
         {
             display:grid;
             grid-template-columns: 2fr 1fr 25em 1fr 6fr 2fr;
@@ -1290,14 +1294,16 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-    #game_grid
-        {
-            display:grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            grid-template-rows: 8em 5fr 1fr;
-            width:80%;
-            margin: auto;
-        }    
+    /*
+        #game_grid
+            {
+                display:grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+                grid-template-rows: 8em 5fr 1fr;
+                width:80%;
+                margin: auto;
+            } 
+    */
     .page_banner, .page_header
         {
             margin-top:1em;
@@ -1480,17 +1486,17 @@ footer
             padding-top:10px;
         }
     /* Motion & Design page desktop rules*/
-    #motion_grid .page_banner, #design_grid .page_banner
+    #motion_grid .page_banner, #design_grid .page_banner, #game_grid .page_banner
         {
             grid-column:1/span 1;
             grid-row:1/ span 1;
         }
-    #motion_grid h1, #design_grid h1
+    #motion_grid h1, #design_grid h1, #game_grid h1
         {
             grid-column:1/span 1;
             grid-row:1/span 1;
         }
-    #motion_interactive, #design_interactive
+    #motion_interactive, #design_interactive, #game_interactive
         {
             grid-column:3/span 1;
             grid-row:2/span 1;
@@ -1501,52 +1507,53 @@ footer
             justify-self:center;
             /*border:1px solid red;*/
         }
-    #motion_interactive img, #design_interactive
+    #motion_interactive img, #design_interactive img, #game_interactive img
         {
             height:100%;
             width:auto;
             
         }
-    #motion_interactive_button, #design_interactive_button
+    #motion_interactive_button, #design_interactive_button, #game_interactive_button
         {
             grid-column: 3/span 1;
             grid-row:2/span1;
             justify-self: end;
         }
-    #motion_grid .arrow_left, #design_grid .arrow_left
+    #motion_grid .arrow_left, #design_grid .arrow_left, #game_grid .arrow_left
         {
             grid-column:3/span 1;
             grid-row:3/span 1;
             align-self: center;
             justify-self:start;
         }
-    #motion_grid .arrow_right, #design_grid .arrow_right
+    #motion_grid .arrow_right, #design_grid .arrow_right, #game_grid .arrow_right
         {
             grid-column:3/span 1;
             grid-row:3/span 1;
             align-self: center;
             justify-self:end;
         }
-    #motion_grid .project_section, #design_grid .project_section
+    #motion_grid .project_section, #design_grid .project_section, #game_grid .project_section
         {
             grid-column:3/span 1;
             grid-row:3/span 1;
             align-self: center;
             justify-self: center;
         }
-    #motion_description, #design_description
+    #motion_description, #design_description, #game_description
         {
             grid-column: 5/span 1;
             grid-row:2/span 3;
             justify-self:center;
             text-align: center;
         }
-    #motion_description h2, #design_description h2
+    #motion_description h2, #design_description h2, #game_descritpion h2
         {
             white-space: nowrap;
             overflow:visible;
+            text-align: center;
         }
-    #motion_description table, #design_description table
+    #motion_description table, #design_description table, #game_descritpion table
         {
             width:100%;
         }
@@ -1559,29 +1566,25 @@ footer
         {
             height:20px;
         }
-    #motion_description h2, #design_description h2
-        {
-            text-align: center;
-        }
-    #motion_grid .resource_list, #design_grid .resource_list
+    #motion_grid .resource_list, #design_grid .resource_list, #game_grid .resource_list
         {
             grid-column:2/span 4;
             grid-row:4/span 1;
             place-self: center;
             width:80%;
         }
-    #motion_grid .resource_list ul, #design_grid .resource_list ul
+    #motion_grid .resource_list ul, #design_grid .resource_list ul, #game_grid .resource_list ul
         {
             justify-content: space-around;
         }
-    #motion_project_select, #design_project_select
+    #motion_project_select, #design_project_select, #game_project_select
         {
             grid-column:2/span 4;
             grid-row: 5/span 1;
             place-self: center;
             width:80%;
         }
-    #motion_project_select ul, #design_project_select ul
+    #motion_project_select ul, #design_project_select ul, #game_project_select ul
         {
             justify-content: space-around;
         }
@@ -1594,6 +1597,7 @@ footer
             margin:0 0 13px;
         }
     /* Game page desktop rules*/
+    /*
     #game_grid .page_banner
         {
             grid-column:1/span 1;
@@ -1618,6 +1622,7 @@ footer
             align-self:start;
             justify-self: center;
         }
+    */
     /* Footer Rules */
     footer
         {

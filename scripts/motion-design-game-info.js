@@ -105,6 +105,10 @@ let motionTags = [
     "Character, Storyboard, Audio Sync"
 ]
 
+let gameTags = [
+    "Scripting, Sprites, Prototype"
+]
+
 let designBriefs = [
     "Tasked with making a celebrity portrait, the project was a good excuse to practice facial expressions and hands.",
     "Inspired By Ferro's opening title for The Thomas Crown Affair this piece was used to research his background and start thinking about the 'Jack of all Trades' quote inside the work.",

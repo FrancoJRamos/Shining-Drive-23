@@ -96,13 +96,16 @@ for (i=0; i<navButtons.length; i++){
             this.nextElementSibling.style.display = "block";
 
             //exception for design & motion page - reduce z-index when overlay is brought up
-            if(pageCheck[0].id =="motion" || pageCheck[0].id == "design"){
+            if(pageCheck[0].id =="motion" || pageCheck[0].id == "design" || pageCheck[0].id == "game"){
                 
-                console.log("the "+page+" page has the nav menu opened");
+                /*
+                    Debug Messages
+                    console.log("the "+page+" page has the nav menu opened");
 
-                console.log(overlayButton[0].style.zIndex);
-                console.log(imageDisplay.style.zIndex);
-                console.log(sectionButtonsGroup[0].style.zIndex);
+                    console.log(overlayButton[0].style.zIndex);
+                    console.log(imageDisplay.style.zIndex);
+                    console.log(sectionButtonsGroup[0].style.zIndex);
+                */
 
                 overlayButton[0].style.zIndex="3";
                 imageDisplay.style.zIndex="3";
@@ -121,7 +124,7 @@ for (i=0; i<navButtons.length; i++){
             this.nextElementSibling.style.display = "none";
             
             //exception for design & motion page - increase z-index when overlay is brought up
-            if(pageCheck.id == "motion" || pageCheck.id == "design" || pageCheck.id == "game"){
+            if(pageCheck[0].id == "motion" || pageCheck[0].id == "design" || pageCheck[0].id == "game"){
                 overlayButton[0].style.zIndex="9";
                 imageDisplay.style.zIndex="8"; 
                 sectionButtonsGroup[0].style.zIndex="9";     
