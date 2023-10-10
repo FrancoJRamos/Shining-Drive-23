@@ -28,7 +28,7 @@ window.addEventListener("load", tagInitialize);
 
 //check if the page is on design or motion page
 //moved to nav.js line 20
-//console.log(pageCheck[0]);
+//console.log(pageCheck[0].id);
 
 let page="";
 let fileFormat="";
@@ -95,6 +95,8 @@ let rightArrow = document.getElementsByClassName("arrow_right");
 
 
 rightArrow[0].addEventListener("click", function(){
+
+    //console.log("the value needed to loop is: 7, the value of array.length is: " +motionTitles.length);
     //console.log("right arrow has been clicked");
     //if statement initalizing projectCount to 1 if it goes over 7
     if (projectCount<7){
@@ -408,7 +410,9 @@ function UpdateDescription(){
         tableTags.innerHTML = motionTags[projectCount-1];
         tableBrief.innerHTML = motionBriefs[projectCount-1];
     }
+    
     else if(page == "game"){
+        //console.log("game page entered")
         tableYear.innerHTML = gameYears[projectCount-1];
         tableTools.innerHTML = gameTools[projectCount-1];
         tableTags.innerHTML = gameTags[projectCount-1];

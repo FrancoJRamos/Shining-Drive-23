@@ -130,5 +130,5 @@ let motionBriefs = [
 ]
 
 let gameBriefs = [
-    "Using skills developed in the Unity Essentials Pathway, this project aimed to see how far I can work through a game design document in two weeks."
+    "Using skills developed in the Unity Essentials Pathway, this project aimed to see how far I can work through a game design document as a designer, programmer and artist in two weeks."
 ]
