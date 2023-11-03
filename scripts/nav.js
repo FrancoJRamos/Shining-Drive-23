@@ -109,7 +109,10 @@ for (i=0; i<navButtons.length; i++){
 
                 overlayButton[0].style.zIndex="3";
                 imageDisplay.style.zIndex="3";
-                sectionButtonsGroup[0].style.zIndex="3";    
+                sectionButtonsGroup[0].style.zIndex="3";
+                leftArrow[0].style.zIndex="3";
+                rightArrow[0].style.zIndex="3";
+                //console.log("hello world");
             }
         }
         //or else the nav list is already visible
@@ -127,7 +130,11 @@ for (i=0; i<navButtons.length; i++){
             if(pageCheck[0].id == "motion" || pageCheck[0].id == "design" || pageCheck[0].id == "game"){
                 overlayButton[0].style.zIndex="9";
                 imageDisplay.style.zIndex="8"; 
-                sectionButtonsGroup[0].style.zIndex="9";     
+                sectionButtonsGroup[0].style.zIndex="9";   
+                //console.log(rightArrow[0].style.zIndex);
+                leftArrow[0].style.zIndex="9";
+                rightArrow[0].style.zIndex="9";
+                //console.log("goodbye world");    
             }
         }
     })

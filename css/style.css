@@ -219,6 +219,8 @@ p
         border: 2px solid #FAC739;
         background-color: #294294;
         transform: rotate(90deg);
+        margin-top:5px;
+        z-index: 9;
     }
 .arrow_left
     {
@@ -227,6 +229,8 @@ p
         border: 2px solid #FAC739;
         background-color: #294294;
         transform: rotate(270deg);
+        margin-top:5px;
+        z-index: 9;
     }
 .project_collection
     {

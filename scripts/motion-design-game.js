@@ -120,6 +120,7 @@ leftArrow[0].addEventListener("click", function(){
     }
     sectionCount=1;
     updateSection();
+    
 });
 
 //update projectCount by which radio button is clicked
@@ -184,6 +185,9 @@ function gridResetMobile(){
 
     overlayButton[0].style.gridColumn="2/span 1";
     overlayButton[0].style.gridRow="2/span 1";
+    overlayButton[0].style.justifySelf="end";
+    overlayButton[0].style.alignSelf="start";
+
 
     sectionButtonsGroup[0].style.gridRow="3/span 1";
     sectionButtonsGroup[0].style.gridColumn="2/span 1";
@@ -191,6 +195,15 @@ function gridResetMobile(){
     sectionButtonsGroup[0].style.background = "";
     sectionButtonsGroup[0].style.border = "";
     sectionButtonsGroup[0].style.height="";
+
+    leftArrow[0].style.gridRow="2/span 1";
+    leftArrow[0].style.justifySelf="center";
+    leftArrow[0].style.marginTop="5px";
+
+    rightArrow[0].style.gridRow="2/span 1";
+    rightArrow[0].style.justifySelf="center";
+    rightArrow[0].style.marginTop="5px";
+
 }
 
 function gridResetTablet(){
@@ -222,10 +235,16 @@ function gridResetDesktop(){
     sectionButtonsGroup[0].style.alignSelf="center";
     sectionButtonsGroup[0].style.background = "";
     sectionButtonsGroup[0].style.border = "";
+
+    
+
 }
 
 //Additional exceptions for z-index values on overlayButton, imageDisplay, and sectionButtonsGroup found in nav.js starting @ line 90
 
+//function definitions for enabling the overlay menu
+    //3 different methods for mobile, tablet, and desktop display
+    //edit imageDisplay, overlayButton[0], sectionButtonsGroup[0], left & right buttons[0]
 function gridOverlayMobile(){
     //From CSS
         //change "page"_interactive rules
@@ -235,15 +254,27 @@ function gridOverlayMobile(){
     imageDisplay.style.height="13em";
     imageDisplay.style.width="22em";
 
-    overlayButton[0].style.gridColumn="3/span 1";
-    overlayButton[0].style.gridRow="4/span 1";
+    overlayButton[0].style.gridColumn="1/span 3";
+    overlayButton[0].style.gridRow="1/span 1";
+    overlayButton[0].style.justifySelf="center";
+    overlayButton[0].style.alignSelf="end";
 
-    sectionButtonsGroup[0].style.gridColumn="1/span 3";
+    sectionButtonsGroup[0].style.gridColumn="2/span 1";
     sectionButtonsGroup[0].style.gridRow="4/span 1";
-    sectionButtonsGroup[0].style.justifySelf="start";
+    sectionButtonsGroup[0].style.justifySelf="center";
     sectionButtonsGroup[0].style.background = "#294294";
     sectionButtonsGroup[0].style.border = "3px solid #fac739";
     sectionButtonsGroup[0].style.height="3em";
+
+    //target left arrow class style rules
+        //console.log(leftArrow[0].style);
+    leftArrow[0].style.gridRow="4/span 1";
+    leftArrow[0].style.justifySelf="end";
+    leftArrow[0].style.marginTop="15px";
+
+    rightArrow[0].style.gridRow="4/span 1";
+    rightArrow[0].style.justifySelf="start";
+    rightArrow[0].style.marginTop="15px";
 
 }
 
@@ -418,21 +449,7 @@ function UpdateDescription(){
         tableTags.innerHTML = gameTags[projectCount-1];
         tableBrief.innerHTML = gameBriefs[projectCount-1];
     }
-    /*
-    else if(page == "game"){
-        tableYear.innerHTML = gameYears[projectCount-1];
-        tableTools.innerHTML = gameTools[projectCount-1];
-        tableBrief.innerHTML = gameBriefs[projectCount-1];
-    }
-    */
-
-    /*
-        console.log("current table data is: ");
-        console.log(tableYear.innerHTML);
-        console.log(tableTools.innerHTML);
-        console.log(tableTags.innerHTML);
-        console.log(tableBrief.innerHTML);
-    */
+    
 }
 
 //function to filter project selection by clicking on a tag button
