@@ -213,12 +213,26 @@ function gridResetTablet(){
     imageDisplay.style.width="21em";
 
     overlayButton[0].style.gridColumn="2/span 1"
+    overlayButton[0].style.justifySelf="end";
+    overlayButton[0].style.gridRow = "2/span 1";
+    overlayButton[0].style.gridColumn="2/span 1";
+    overlayButton[0].style.alignSelf="start";
+
 
     sectionButtonsGroup[0].style.gridRow="3/span 1";
     sectionButtonsGroup[0].style.gridColumn="2/span 1";
     sectionButtonsGroup[0].style.alignSelf="center";
     sectionButtonsGroup[0].style.background = "";
     sectionButtonsGroup[0].style.border = "";
+
+    leftArrow[0].style.gridRow="3/span 1";
+    leftArrow[0].style.gridColumn="2/span 1"
+    leftArrow[0].style.justifySelf="start";
+
+    rightArrow[0].style.gridRow="3/span 1";
+    rightArrow[0].style.gridColumn="2/span 1"
+    rightArrow[0].style.justifySelf="end";
+
 }
 
 function gridResetDesktop(){
@@ -229,6 +243,10 @@ function gridResetDesktop(){
 
     overlayButton[0].style.gridColumn="3/span 1"
     overlayButton[0].style.justifySelf="end";
+    overlayButton[0].style.gridRow = "2/span 1";
+    overlayButton[0].style.gridColumn="3/span 1";
+    overlayButton[0].style.alignSelf="start";
+
 
     sectionButtonsGroup[0].style.gridRow="3/span 1";
     sectionButtonsGroup[0].style.gridColumn="3/span 1";
@@ -236,7 +254,14 @@ function gridResetDesktop(){
     sectionButtonsGroup[0].style.background = "";
     sectionButtonsGroup[0].style.border = "";
 
-    
+    leftArrow[0].style.gridRow="3/span 1";
+    leftArrow[0].style.gridColumn="3/span 1"
+    leftArrow[0].style.justifySelf="start";
+
+    rightArrow[0].style.gridRow="3/span 1";
+    rightArrow[0].style.gridColumn="3/span 1"
+    rightArrow[0].style.justifySelf="end";
+
 
 }
 
@@ -283,14 +308,27 @@ function gridOverlayTablet(){
     imageDisplay.style.gridColumn="1/span 4";
     imageDisplay.style.height="23em";
     imageDisplay.style.width="40em";
+    imageDisplay.style.alignSelf="center";
+    imageDisplay.style.justifySelf="center";
 
-    overlayButton[0].style.gridColumn="4/span 1";
+    overlayButton[0].style.gridColumn="1/span 4";
+    overlayButton[0].style.gridRow = "1/span 1";
+    overlayButton[0].style.justifySelf = "center";
+    overlayButton[0].style.alignSelf="end";
 
     sectionButtonsGroup[0].style.gridRow="5/span 1";
     sectionButtonsGroup[0].style.gridColumn="1/span 4";
     sectionButtonsGroup[0].style.alignSelf="start";
     sectionButtonsGroup[0].style.background = "#294294";
     sectionButtonsGroup[0].style.border = "3px solid #fac739";
+
+    leftArrow[0].style.gridRow="3/span 1";
+    leftArrow[0].style.gridColumn="1/span 4"
+    leftArrow[0].style.justifySelf="start";
+
+    rightArrow[0].style.gridRow="3/span 1";
+    rightArrow[0].style.gridColumn="1/span 4"
+    rightArrow[0].style.justifySelf="end";
 
 }
 
@@ -300,14 +338,25 @@ function gridOverlayDesktop(){
     imageDisplay.style.height="37em";
     imageDisplay.style.width="66em";
 
-    overlayButton[0].style.gridColumn="6/span 1"
-    overlayButton[0].style.justifySelf="start";
+    overlayButton[0].style.gridRow = "1/span 1";
+    overlayButton[0].style.gridColumn="1/span 6";
+    overlayButton[0].style.justifySelf="center";
+    overlayButton[0].style.alignSelf="end";
+    //overlayButton[0].style.MarginBottom="50px";
 
     sectionButtonsGroup[0].style.gridRow="6/span 1";
     sectionButtonsGroup[0].style.gridColumn="1/span 6";
     sectionButtonsGroup[0].style.alignSelf="end";
     sectionButtonsGroup[0].style.background = "#294294";
     sectionButtonsGroup[0].style.border = "3px solid #fac739";
+
+    leftArrow[0].style.gridRow="4/span 1";
+    leftArrow[0].style.gridColumn="1/span 6"
+    leftArrow[0].style.justifySelf="start";
+
+    rightArrow[0].style.gridRow="4/span 1";
+    rightArrow[0].style.gridColumn="1/span 6"
+    rightArrow[0].style.justifySelf="end";
     
 }
 
