@@ -540,7 +540,7 @@ function tagInitialize(){
 
             for(let k=0; k<gameTags.length; k++){
                 if(gameTags[k].includes(tagButtons[j].value)){
-                    //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+motionTags[k]);
+                    //console.log("tag button value: "+tagButtons[j].value+" is found in array element: "+gameTags[k]);
                     tagButtons[j].style.display="block";
                 }
             }
@@ -560,87 +560,107 @@ function projectInitialize(){
         projectButtons[j].style.display="block";
     }
 }
-//write a function that when a tag button is clicked
-    //hides all other tag buttons
-    //hides all project buttons except those that share a tag
-    function tagFilter(tagSelected){
-    //Debug Messages
-        //console.log("tagFilter function has been called");
 
-        //console.log("button: " + this.value + " has been clicked");
-
-        //console.log(tagButtons);
-        //console.log("element sibling display = "+this.nextElementSibling.style.display);
-            
-    //when a filter button is pressed: change its appearance to an active buton
-        //hide all other filter buttons
-    if(filter=="inactive"){
-        //debug message
-            //console.log("filter inactive branch entered")
-        
-        //hide all filter buttons first
+function hideTagButtons(){
+    //hide all filter buttons first
         for (let m=0; m<tagButtons.length;m++){
             tagButtons[m].style.display="none";
         };
+}
+function hideProjectButtons(){
+    for (let i=0; i<projectButtons.length;i++){
+        projectButtons[i].style.display="none";
+    }
+}
 
-        //set selected button to display
-        //set appearance to active
-        tagSelected.style.display="block";
-        tagSelected.style.backgroundColor="#fac739";
-        tagSelected.style.color="#294294";
+function filterDesignProjects(tagCheck)
+{
+        //debug messages
+            //console.log("design loop entered");
+            //console.log(tagCheck.value);
 
-
-        //base a check for filter tags based off of values in a projects tag data
-        if(pageCheck[0].id=="design")
+        //check filter buttons to match project tag data
+        for(let k=0; k<designTags.length; k++)
         {
-            //debug messages
-                //console.log("design loop entered");
-                //console.log(tagSelected.value);
-
-            //check filter buttons to match project tag data
-            for(let k=0; k<designTags.length; k++){
-                //if a value is found in a project that matches the filter button pressed
-                    //set that project to visible
-                if(designTags[k].includes(tagSelected.value)){
-                    //debug message
-                        //console.log(projectForm[k]);
-                    projectButtons[k].style.display="block";
-                }}
+            //if a value is found in a project that matches the filter button pressed
+                //set that project to visible
+            if(designTags[k].includes(tagCheck.value))
+            {
+                //debug message
+                    //console.log(projectForm[k]);
+                projectButtons[k].style.display="block";
+            }
         }
-        //base a check for filter tags based off of values in a projects tag data
-        else if(pageCheck[0].id=="motion")
-        {
-            
-            //debug message
-                //console.log(tagSelected.value);
 
-            //check filter buttons to match project tag data
-            for(let k=0; k<motionTags.length; k++){
-                //if a value is found in a project that matches the filter button pressed
-                    //set that project to visible
-                    if(motionTags[k].includes(tagSelected.value)){
-                    //Debug Message
-                        //console.log(projectForm[k]);
-                    projectButtons[k].style.display="block"
-                }}
-        }
-        //base a check for filter tags based off of values in a projects tag data
-        else if(pageCheck[0].id=="game")
+}
+function filterMotionProjects(tagCheck)
+{
+        
+        //debug message
+            //console.log(tagCheck.value);
+
+        //check filter buttons to match project tag data
+        for(let k=0; k<motionTags.length; k++)
         {
-            
+            //if a value is found in a project that matches the filter button pressed
+                //set that project to visible
+                if(motionTags[k].includes(tagCheck.value))
+                {
+                //Debug Message
+                    //console.log(projectForm[k]);
+                projectButtons[k].style.display="block"
+                }
+        }
+}
+function filterGameProjects(tagCheck)
+{
+                
             //debug message
-                //console.log(tagSelected.value);
+                //console.log(tagCheck.value);
 
             //check filter buttons to match project tag data
             for(let k=0; k<gameTags.length; k++){
                 //if a value is found in a project that matches the filter button pressed
                     //set that project to visible
-                    if(gameTags[k].includes(tagSelected.value)){
+                    if(gameTags[k].includes(tagCheck.value)){
                     //Debug Message
                         //console.log(projectForm[k]);
                     projectButtons[k].style.display="block"
                 }}
-        }
+
+}
+
+//write a function that when a tag button is clicked
+    //hides all other tag buttons
+    //hides all project buttons except those that share a tag
+    function tagFilter(tagSelected)
+    {
+        //Debug Messages
+            //console.log("tagFilter function has been called");
+
+            //console.log("button: " + this.value + " has been clicked");
+
+            //console.log(tagButtons);
+            //console.log("element sibling display = "+this.nextElementSibling.style.display);
+            
+        //when a filter button is pressed: change its appearance to an active buton
+            //hide all other filter buttons & project buttons
+    if(filter=="inactive"){
+        //hide all filter buttons & Project buttons
+        hideTagButtons();
+        hideProjectButtons();
+        //set selected button to display & appearance to active
+        tagSelected.style.display="block";
+        tagSelected.style.backgroundColor="#fac739";
+        tagSelected.style.color="#294294";
+
+        //base a check for filter tags based off of values in a projects tag data
+        if(pageCheck[0].id=="design")
+        {filterDesignProjects(tagSelected);}
+        else if(pageCheck[0].id=="motion")
+        {filterMotionProjects(tagSelected)}
+        else if(pageCheck[0].id=="game")
+        {filterGameProjects(tagSelected)}
 
         filter = "active";
     }

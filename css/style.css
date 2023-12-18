@@ -252,7 +252,7 @@ p
         z-index: 9;
     }
 /* List Rules*/
-header li, #quick_links li, footer li,#contact_more li, #bio_story_select li, .resource_list li, .tag_select li, .project_select li, .project_section li
+header li, #quick_links li, footer li,#contact_more li, #bio_story_select li, .resource_list li, .tag_select li, .project_select li, .project_section li, #email_panel li
     {
         list-style-type: none;
     }
@@ -487,16 +487,16 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-        /*
-    #game_grid
+        
+    #sub_page_grid
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 8em 10em 3em 1fr;
+            grid-template-rows: 8em 10em 1fr;
             width:90%;
             margin: auto;
         }
-        */
+        
     /* Header mobile Rules */
     /* Nav mobile Layout */
     nav
@@ -860,7 +860,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr ;
-            grid-template-rows: 10em 2fr 11em;
+            grid-template-rows: 10em 12em 11em;
             margin:auto;
             width:80%;
             height:min-content;
@@ -870,7 +870,7 @@ footer
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 10em 2fr 5fr 3fr;
+            grid-template-rows: 10em 12em 5fr 3fr;
             margin:auto;
             width:60%;
             height:min-content;
@@ -880,7 +880,7 @@ footer
         {
             display:grid;
             grid-template-columns: 3em 3fr 3fr 3em;
-            grid-template-rows: 10em 11em 7fr 6fr 10em 7em;
+            grid-template-rows: 10em 12em 7fr 6fr 10em 7em;
             margin:auto;
             width:80%;
             height:min-content;
@@ -896,16 +896,16 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-    /*
-        #game_grid
+    
+        #sub_page_grid
         {
             display:grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 10em 6fr 1fr;
+            grid-template-rows: 10em 12em 1fr;
             width:80%;
             margin: auto;
         }    
-    */
+    
     /* Header Tablet Rules */
     /* Nav Tablet Layout */
     nav
@@ -928,12 +928,12 @@ footer
         }
     /* Body Tablet Rules */
     /* Index Page Tablet Rules*/
-    #home_grid h1
+    h1
         {
             grid-column:1/span 1;
             grid-row:1/span 1;
         }
-    #home_grid .page_banner
+    .page_banner
         {
             grid-column: 1/span 1;
             grid-row: 1/span 1;
@@ -1202,6 +1202,12 @@ footer
                 align-self:center;
             }
     */
+    /* Sub-page: Email Form Tablet rules*/
+            #email_form_plugin
+            {
+                grid-column: 1/span 1;
+                grid-row: 2/span 2;
+            }
     /* Footer Rules */
     footer
         {
@@ -1298,27 +1304,27 @@ footer
             height:min-content;
             margin-bottom: 30px;
         }
-    /*
-        #game_grid
+    
+        #sub_page_grid
             {
                 display:grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 8em 5fr 1fr;
+                grid-template-columns: 2fr 3fr 3fr 2fr;
+                grid-template-rows: 8em 1fr 8em;
                 width:80%;
                 margin: auto;
             } 
-    */
+    
     .page_banner, .page_header
         {
             margin-top:1em;
         }
     /* Index Page Desktop Rules*/
-    #home_grid .page_banner
+    .page_banner
         {
             grid-column: 1/span 1;
             grid-row: 1/span 1;
         }
-    #home_grid h1
+    h1
         {
             grid-column:1/span 1;
             grid-row: 1/span 1;
@@ -1600,33 +1606,12 @@ footer
         {
             margin:0 0 13px;
         }
-    /* Game page desktop rules*/
-    /*
-    #game_grid .page_banner
-        {
-            grid-column:1/span 1;
-            grid-row:1/span 1;
-        }
-    #game_grid h1
-        {
-            grid-column:1/span 1;
-            grid-row:1/span 1;
-        }
-    #game_grid img
-        {
-            grid-column:2/span 2;
-            grid-row:2/span 1;
-            justify-self: center;
-            align-self: center;
-        }
-    #game_grid p
-        {
-            grid-column:2/span 2;
-            grid-row: 3/span 1;
-            align-self:start;
-            justify-self: center;
-        }
-    */
+    /* Sub-Page Email Form desktop rules*/
+    #email_form_plugin
+    {
+        grid-column: 2/span 2;
+        grid-row: 2/span 1;
+    }
     /* Footer Rules */
     footer
         {

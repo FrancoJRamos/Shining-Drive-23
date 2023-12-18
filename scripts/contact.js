@@ -62,7 +62,7 @@ for (i=0; i<panelButtons.length; i++){
                 //console.log("resume clicked");
                 resumeTemplate = "10em";
             }else if(this.id=="email_button"){
-                emailFormTemplate = "5fr";
+                emailFormTemplate = "15em";
             }else if(this.id=="more_button"){
                 moreTemplate = "3fr";
             }

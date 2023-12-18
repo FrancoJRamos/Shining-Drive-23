@@ -92,18 +92,29 @@
                 </table>
             </div>
 
-            
-            <div class="project_select" id="game_project_select">
-                <h3>Additional Projects</h3>
-               
-                <form>
-                    <input type="radio" id="project_01" name="project_select_form" value="1">
-                        <label for="project_01">
-                            <img src="images/buttons/game-button-project01.jpg" alt="endless runner prototype">
-                        </label>
-                </form>
+            <div id="game_project_select">
+                <div class="tag_select">
+                    <h3>Project Tags</h3>
+
+                    <form>
+                        <input type="button" id="tag_01" class="tag_button" name="tag_scripting" value="Scripting">
+                        <input type="button" id="tag_02" class="tag_button" name="tag_sprites" value="Sprites">
+                        <input type="button" id="tag_03" class="tag_button" name="tag_prototype" value="Prototype">
+                    </form>
+
+                </div>
+
+                <div class="project_select">
+                    <h3>Additional Projects</h3>
+                
+                    <form>
+                        <input type="radio" id="project_01" name="project_select_form" value="1">
+                            <label for="project_01">
+                                <img src="images/buttons/game-button-project01.jpg" alt="endless runner prototype">
+                            </label>
+                    </form>
+                </div>
             </div>
-            
 
         </section>
         <div id="project_overlay"></div>

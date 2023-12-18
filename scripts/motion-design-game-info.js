@@ -86,18 +86,18 @@ let gameTools = [
 ]
 
 let designTags = [
-    "Study, Character, Sketch",
-    "Graphic Design, Figure, Sketch",
-    "Graphic Design, Figure, Sketch",
+    "Study, Character, Form",
+    "Graphic Design, Figure, Thumbnail",
+    "Graphic Design, Figure, Thumbnail",
     "Study, Figure, Form",
-    "Background, Figure, Sketch",
-    "Graphic Design, Background, Iteration",
-    "Figure, Sketch, Iteration"
+    "Background, Figure, Thumbnail",
+    "Character, Background, Thumbnail",
+    "Character, Figure, Thumbnail"
 ]
 
 let motionTags = [
     "Character, UV Unwrap, Background",
-    "Character, Audio Sync, Sketch",
+    "Character, Audio Sync, Thumbnail",
     "Storyboard, Audio Sync, Background",
     "Study, FX, Form",
     "Character, UV Unwrap, 3D Character Rig",
