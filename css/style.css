@@ -383,7 +383,7 @@ nav ul
 /* Game Rules*/
 #game .arrow_left, #game .arrow_right
     {
-        display: none;
+        display: block;
     }
 /* Footer Rules */
 footer
@@ -1321,14 +1321,14 @@ footer
             margin-bottom: 30px;
         }
     
-        #sub_page_grid
-            {
-                display:grid;
-                grid-template-columns: 2fr 3fr 3fr 2fr;
-                grid-template-rows: 8em 1fr 8em;
-                width:80%;
-                margin: auto;
-            } 
+    #sub_page_grid
+        {
+            display:grid;
+            grid-template-columns: 2fr 3fr 3fr 2fr;
+            grid-template-rows: 8em 1fr 8em;
+            width:80%;
+            margin: auto;
+        } 
     
     .page_banner, .page_header
         {
@@ -1636,11 +1636,12 @@ footer
             grid-column: 2/span 2;
             grid-row: 2/span 1;
         }
-    /* Sub-Page Games Embed rules*/
+    /* Sub-Page Games Embed Desktop rules*/
     #game_embed
         {
-            grid-column: 2/span 1;
+            grid-column: 2/span 2;
             grid-row: 2/span 1;
+            justify-self:center;
         }
     /* Footer Rules */
     footer

@@ -34,7 +34,8 @@ let motionTitles = [
 ]
 
 let gameTitles = [
-    "Endless Runner Prototype"
+    "Endless Runner Prototype",
+    "River Raid™ Recreation"
 ]
 
 let designYears = [
@@ -58,7 +59,8 @@ let motionYears = [
 ]
 
 let gameYears = [
-    "2023"
+    "2023",
+    "2024"
 ]
 
 let designTools = [
@@ -82,7 +84,8 @@ let motionTools = [
 ]
 
 let gameTools = [
-    "Unity, Visual Studio Code, Clip Studio Paint"
+    "Unity, Visual Studio Code, Clip Studio Paint",
+    "Unity, Visual Studio Code"
 ]
 
 let designTags = [
@@ -106,7 +109,8 @@ let motionTags = [
 ]
 
 let gameTags = [
-    "Scripting, Sprites, Prototype"
+    "Scripting, Sprites, Prototype",
+    "Scripting, Placeholders, Demo"
 ]
 
 let designBriefs = [
@@ -130,5 +134,11 @@ let motionBriefs = [
 ]
 
 let gameBriefs = [
-    "Using skills developed in the Unity Essentials Pathway, this project aimed to see how far I can work through a game design document as a designer, programmer and artist in two weeks."
+    "Using skills developed in the Unity Essentials Pathway, this project aimed to see how far I can work through a game design document as a designer, programmer and artist in two weeks.",
+    "Developed as a freshman in the ACC Game Design program, this project recreates the basic gameplay from River Raid™"
+]
+
+let gameLinks = [
+    "game-Flying.html",
+    "game-RiverRaid.html"
 ]

@@ -21,6 +21,8 @@ let sectionButtons = document.getElementsByClassName("project_section_select");
 let sectionButtonsGroup = document.getElementsByClassName("project_section");
 let sectionButtonDefault = "<img src='images/sd-logo-inverse-dark.svg' alt='Project Section "+sectionCount+"'>"
 
+let projectLength = 0;
+
 //onload call updateSection to update the sectionButton[0] to on
 //all section buttons are set to off by default
 window.addEventListener("load",updateSection);
@@ -37,13 +39,16 @@ let fileFormat="";
     if(pageCheck[0].id == "motion"){
         page="motion";
         fileFormat="gif";
+        projectLength = motionTitles.length;
     }else if(pageCheck[0].id =="design"){
         page="design";
         fileFormat="jpg";
+        projectLength = designTitles.length;
     }
     else if(pageCheck[0].id == "game"){
         page="game";
         fileFormat="gif";
+        projectLength = gameTitles.length;
     }
     //console.log("current page is: "+page);
     //check innerHTML of current project
@@ -63,7 +68,7 @@ let tableYear = document.getElementById("project_table_"+page+"_year");
 let tableTools = document.getElementById("project_table_"+page+"_tools");
 let tableTags = document.getElementById("project_table_"+page+"_tags");
 let tableBrief = document.getElementById("project_table_"+page+"_brief");
-
+let gameLinkButton = document.getElementById("game_link");
 //declare function to update the project image/description
 function Updateproject(){
 
@@ -96,11 +101,13 @@ let rightArrow = document.getElementsByClassName("arrow_right");
 
 rightArrow[0].addEventListener("click", function(){
 
+    //console.log(designTitles.length);
     //console.log("the value needed to loop is: 7, the value of array.length is: " +motionTitles.length);
     //console.log("right arrow has been clicked");
     //if statement initalizing projectCount to 1 if it goes over 7
-    if (projectCount<7){
+    if (projectCount<projectLength){
         projectCount +=1;
+        
     }
     else{
         projectCount=1;
@@ -116,7 +123,7 @@ leftArrow[0].addEventListener("click", function(){
         projectCount -=1;
     }
     else{
-        projectCount=7;
+        projectCount=projectLength;
     }
     sectionCount=1;
     updateSection();
@@ -497,6 +504,7 @@ function UpdateDescription(){
         tableTools.innerHTML = gameTools[projectCount-1];
         tableTags.innerHTML = gameTags[projectCount-1];
         tableBrief.innerHTML = gameBriefs[projectCount-1];
+        gameLinkButton.href = gameLinks[projectCount-1];
     }
     
 }
